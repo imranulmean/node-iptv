@@ -39,6 +39,8 @@ export default function M3UPlayer() {
     const [activePlaylist,  setActivePlaylist]  = useState(playlists[0]);
     const [loading,         setLoading]         = useState(false);
 
+    const [showList, setShowList] = useState(true);
+    
     const filtered = channels.filter(c =>
         c.name.toLowerCase().includes(search.toLowerCase())
     );
@@ -130,38 +132,48 @@ export default function M3UPlayer() {
 
                 <div className="flex gap-3">
 
-                    {/* channel list */}
-                    <div className="w-64 flex flex-col gap-2">
+                    {/* channel list */}                    
+                    <div className={`flex flex-col gap-2 ${showList ? 'w-64' : 'w-2' }`}>
                         <div className="flex items-center justify-between">
+                           <button onClick={() => setShowList(prev => !prev)}
+                                className="p-1 rounded hover:bg-gray-100 text-gray-500">
+                                ☰
+                            </button>                             
                             <p className="text-sm font-medium">{activePlaylist.label}</p>
-                            <span className="text-xs text-gray-400">{filtered.length} ch</span>
+                            <span className="text-xs text-gray-400">{filtered.length} ch</span>                          
                         </div>
-                        <input
-                            type="text"
-                            placeholder="search..."
-                            value={search}
-                            onChange={e => setSearch(e.target.value)}
-                            className="w-full border border-gray-300 rounded-lg px-2 py-1.5 text-xs outline-none focus:border-green-500"
-                        />
-                        <div className="h-[500px] overflow-y-auto border border-gray-200 rounded-lg">
-                            {loading &&
-                                <p className="text-xs text-gray-400 text-center p-4">loading...</p>
-                            }
-                            {!loading && filtered.map((ch, i) => (
-                                <div key={i} onClick={() => play(ch)}
-                                    className={`px-3 py-2 text-xs cursor-pointer border-b border-gray-100 truncate flex items-center gap-2
-                                        ${active?.url === ch.url
-                                            ? 'bg-blue-50 text-blue-700 font-medium'
-                                            : 'hover:bg-gray-50 text-gray-700'
-                                        }`}>
-                                    <span className="text-gray-400 w-6 shrink-0">{i + 1}</span>
-                                    <span className="truncate">{ch.name}</span>
-                                </div>
-                            ))}
-                            {!loading && filtered.length === 0 &&
-                                <p className="text-xs text-gray-400 text-center p-4">no channels found</p>
-                            }
-                        </div>
+                        {
+                            showList &&
+                            <>
+                                <input
+                                    type="text"
+                                    placeholder="search..."
+                                    value={search}
+                                    onChange={e => setSearch(e.target.value)}
+                                    className="w-full border border-gray-300 rounded-lg px-2 py-1.5 text-xs outline-none focus:border-green-500"
+                                />
+                                <div className="h-[500px] overflow-y-auto border border-gray-200 rounded-lg">
+                                    {loading &&
+                                        <p className="text-xs text-gray-400 text-center p-4">loading...</p>
+                                    }
+                                    {!loading && filtered.map((ch, i) => (
+                                        <div key={i} onClick={() => play(ch)}
+                                            className={`px-3 py-2 text-xs cursor-pointer border-b border-gray-100 truncate flex items-center gap-2
+                                                ${active?.url === ch.url
+                                                    ? 'bg-blue-50 text-blue-700 font-medium'
+                                                    : 'hover:bg-gray-50 text-gray-700'
+                                                }`}>
+                                            <span className="text-gray-400 w-6 shrink-0">{i + 1}</span>
+                                            <span className="truncate">{ch.name}</span>
+                                        </div>
+                                    ))}
+                                    {!loading && filtered.length === 0 &&
+                                        <p className="text-xs text-gray-400 text-center p-4">no channels found</p>
+                                    }
+                                </div>                            
+                            </>
+                        }
+
                     </div>
 
                     {/* player */}
