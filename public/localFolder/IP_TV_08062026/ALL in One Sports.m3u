@@ -1,0 +1,1276 @@
+#EXTM3U
+#EXTINF:0,SNY
+#EXTVLCOPT:network-caching=1000
+http://a47.streamtrx.xyz:80/play/live.php?mac=A0:BB:3E:04:A6:D0&stream=174945&extension=ts&play_token=csMGDRJELO
+#EXTINF:0,PIX11
+#EXTVLCOPT:network-caching=1000
+http://bgdc.live:25461/123456/031768/99234
+#EXTINF:0,Brisbane Tigers
+#EXTVLCOPT:network-caching=1000
+https://d3th06b93xpzrt.cloudfront.net/out/v1/da370970d97f458697078df41be45270/index.m3u8?start=2026-05-09T06:45:26+00:00&aws.manifestfilter=video_bitrate:0-4000000
+#EXTVLCOPT:network-caching=1000
+https://github.com/llcoolhack/sportsbariptv/blob/main/tigersplaceholder.png?raw=true
+#EXTINF:0,Sportsbar Rugby 24/7
+#EXTVLCOPT:network-caching=1000
+http://chasintv.vip/live/Robert/123456/800010.ts
+#EXTINF:0,Sportsbar Rugby Live
+#EXTVLCOPT:network-caching=1000
+http://proxpanel.live/live/Ronald/Ronald1/276933.ts
+#EXTINF:0,Sportsbar Rugby Live 3
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2908.m3u8
+#EXTINF:0,Sportsbar Rugby Live 4
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2907.m3u8
+#EXTINF:0,Sportsbar NRL 1
+#EXTVLCOPT:network-caching=1000
+http://a47.streamtrx.xyz:80/play/live.php?mac=A0:BB:3E:04:A6:D0&stream=1520171&extension=ts&play_token=H6Sg6aFjvb
+#EXTINF:0,Sportsbar AFL
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/live/leedale%40nycap.rr.com/mY8TwKjP3J/793017.ts
+#EXTINF:0,Sportsbar Premier League
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/536.m3u8
+#EXTINF:0,Sportsbar A-League 1
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2451.m3u8
+#EXTINF:0,Sportsbar A-League 2
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/312.m3u8
+#EXTINF:0,EPL 1
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2928.m3u8
+#EXTINF:0,EPL 2
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2929.m3u8
+#EXTINF:0,EPL 3
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2930.m3u8
+#EXTINF:0,EPL 4
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2931.m3u8
+#EXTINF:0,EPL 5
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2932.m3u8
+#EXTINF:0,EPL 6
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2933.m3u8
+#EXTINF:0,EPL 7
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2934.m3u8
+#EXTINF:0,EPL 8
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2935.m3u8
+#EXTINF:0,EPL 9
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2936.m3u8
+#EXTINF:0,EPL 10
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2937.m3u8
+#EXTINF:0,EPL 11
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2938.m3u8
+#EXTINF:0,EPL 12
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2939.m3u8
+#EXTINF:0,EPL 13
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2940.m3u8
+#EXTINF:0,EPL 14
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2941.m3u8
+#EXTINF:0,NBC
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/78.m3u8
+#EXTINF:0,CBS
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/79.m3u8
+#EXTINF:0,ABC
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/103.m3u8
+#EXTINF:0,TNT
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/117.m3u8
+#EXTINF:0,FOX
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/82.m3u8
+#EXTINF:0,TBS
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/118.m3u8
+#EXTINF:0,USA
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/85.m3u8
+#EXTINF:0,Jeopardy
+#EXTVLCOPT:network-caching=1000
+http://chasintv.vip:80/George1/George2/807736
+#EXTINF:0,Jeopardy 24/7
+#EXTVLCOPT:network-caching=1000
+http://chasintv.vip:80/George1/George2/91003
+#EXTINF:0,A&E
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/417871
+#EXTINF:0,AMC
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/417872
+#EXTINF:0,Animal Planet
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/417996
+#EXTINF:0,Aspire
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/417874
+#EXTINF:0,Bravo
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/417880
+#EXTINF:0,Comedy Central
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/417882
+#EXTINF:0,The CW
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/676378
+#EXTINF:0,Discovery Channel
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/418001
+#EXTINF:0,FX
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/417888
+#EXTINF:0,History
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/417998
+#EXTINF:0,MTV
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/417898
+#EXTINF:0,Nat Geo Wild
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/418005
+#EXTINF:0,National Geographic
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/418006
+#EXTINF:0,Oxygen
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/417901
+#EXTINF:0,Paramount
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/417902
+#EXTINF:0,PBS
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/683405
+#EXTINF:0,SYFY
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/417911
+#EXTINF:0,Tru TV
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/417917
+#EXTINF:0,Ten
+#EXTVLCOPT:network-caching=1000
+https://i.mjh.nz/.r/10-qld.m3u8
+#EXTINF:0,Nine
+#EXTVLCOPT:network-caching=1000
+http://pro.true8k.xyz:80/play/live.php?mac=00:1A:79:73:19:6E&stream=1537679&extension=ts&play_token=482qsVXMXJ
+#EXTINF:0,Nine Gem
+#EXTVLCOPT:network-caching=1000
+https://i.mjh.nz/.r/gem-qld.m3u8
+#EXTINF:0,Seven
+#EXTVLCOPT:network-caching=1000
+https://i.mjh.nz/.r/seven-bri.m3u8
+#EXTINF:0,Seven Two
+#EXTVLCOPT:network-caching=1000
+https://i.mjh.nz/.r/7two-bri.m3u8
+#EXTINF:0,Seven Mate
+#EXTVLCOPT:network-caching=1000
+https://i.mjh.nz/.r/7mate-bri.m3u8
+#EXTINF:0,ABC TV
+#EXTVLCOPT:network-caching=1000
+https://c.mjh.nz/abc-qld.m3u8
+#EXTINF:0,SBS
+#EXTVLCOPT:network-caching=1000
+https://i.mjh.nz/.r/sbs-sbst.m3u8
+#EXTINF:0,Sky Racing 1
+#EXTVLCOPT:network-caching=1000
+https://skylivetab-new.akamaized.net/hls/live/2038780/sky1/index.m3u8
+#EXTINF:0,Sky Racing 2
+#EXTVLCOPT:network-caching=1000
+https://skylivetab-new.akamaized.net/hls/live/2038781/sky2/index.m3u8
+#EXTINF:0,Fox Sports News
+#EXTVLCOPT:network-caching=1000
+http://eagle1903.com:80/play/live.php?mac=00:1A:79:46:56:73&stream=646972&extension=ts&play_token=zod2HVwp6G
+#EXTINF:0,Fox Cricket
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/1972.m3u8
+#EXTINF:0,Fox League
+#EXTVLCOPT:network-caching=1000
+https://a1xs.vip/700002
+#EXTINF:0,Fox Sports 503
+#EXTVLCOPT:network-caching=1000
+https://a1xs.vip/700003
+#EXTINF:0,Fox Footy
+#EXTVLCOPT:network-caching=1000
+https://a1xs.vip/700004
+#EXTINF:0,Fox Sports 505
+#EXTVLCOPT:network-caching=1000
+http://chasintv.vip/live/Robert/123456/152320.ts
+#EXTINF:0,Fox Sports 506
+#EXTVLCOPT:network-caching=1000
+http://chasintv.vip/live/Robert/123456/152319.ts
+#EXTINF:0,Fox Sports 507
+#EXTVLCOPT:network-caching=1000
+http://eagle1903.com:80/play/live.php?mac=00:1A:79:46:56:73&stream=646965&extension=ts&play_token=dtibI66RLB
+#EXTINF:0,Racing.com
+#EXTVLCOPT:network-caching=1000
+https://i.mjh.nz/.r/racing-fast.m3u8
+#EXTINF:0,ESPN
+#EXTVLCOPT:network-caching=1000
+http://sky-glass.live:80/Luke1/Luke2/104060
+#EXTINF:0,ESPN2
+#EXTVLCOPT:network-caching=1000
+http://sky-glass.live:80/Luke1/Luke2/104058
+#EXTINF:0,Rugbypass TV
+#EXTVLCOPT:network-caching=1000
+http://pro.true8k.xyz:80/play/live.php?mac=00:1A:79:73:19:6E&stream=1536477&extension=ts&play_token=9oykrhCVDk
+#EXTINF:0,SKY Sport 1
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/live/leedale%40nycap.rr.com/mY8TwKjP3J/759461.m3u8
+#EXTINF:0,SKY Sport 2
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/live/leedale%40nycap.rr.com/mY8TwKjP3J/759462.m3u8
+#EXTINF:0,SKY Sport 3
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/live/leedale%40nycap.rr.com/mY8TwKjP3J/759463.m3u8
+#EXTINF:0,SKY Sport 4
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/live/leedale%40nycap.rr.com/mY8TwKjP3J/759464.m3u8
+#EXTINF:0,SKY Sport 5
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/live/leedale%40nycap.rr.com/mY8TwKjP3J/759465.m3u8
+#EXTINF:0,SKY Sport 6
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/live/leedale%40nycap.rr.com/mY8TwKjP3J/759466.m3u8
+#EXTINF:0,SKY Sport 7
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/live/leedale%40nycap.rr.com/mY8TwKjP3J/759467.m3u8
+#EXTINF:0,SKY Sport 8
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/live/leedale%40nycap.rr.com/mY8TwKjP3J/759468.m3u8
+#EXTINF:0,SKY Sport 9
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/live/leedale%40nycap.rr.com/mY8TwKjP3J/759477.m3u8
+#EXTINF:0,ESPN (US)
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/254.m3u8
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/509097
+#EXTINF:0,ESPN2 (US)
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/255.m3u8
+#EXTINF:0,ESPNU
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/256.m3u8
+#EXTINF:0,Big 10
+#EXTVLCOPT:network-caching=1000
+http://envytv.xyz:25461/marGOR45/Spring21/57910
+#EXTINF:0,SEC Network
+#EXTVLCOPT:network-caching=1000
+http://143.244.60.30/SEC_NETWORK/index.m3u8
+#EXTINF:0,ACC Network
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/6767.m3u8
+#EXTINF:0,ACC Digital Network
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/3967.m3u8
+#EXTINF:0,Fox Sports 1
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/1179.m3u8
+#EXTINF:0,Fox Sports 2
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/252.m3u8
+#EXTINF:0,Fox Soccer Plus
+#EXTVLCOPT:network-caching=1000
+http://envytv.xyz:25461/marGOR45/Spring21/57808
+#EXTINF:0,CBS Sports Network
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/1974.m3u8
+#EXTINF:0,NFL Network
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/273.m3u8
+#EXTINF:0,NBA TV
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/270.m3u8
+#EXTINF:0,NHL Network
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/272.m3u8
+#EXTINF:0,MLB Network
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/271.m3u8
+#EXTINF:0,SNY
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/live/leedale%40nycap.rr.com/mY8TwKjP3J/418162.ts
+#EXTINF:0,MSGHD
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/3768.m3u8
+#EXTINF:0,MSG2
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2688.m3u8
+#EXTINF:0,MSG Sportsnet
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2690.m3u8
+#EXTINF:0,YES Network
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/1890.m3u8
+#EXTINF:0,NBC Sports Bay Area
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2414.m3u8
+#EXTINF:0,NBC Sports Boston
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2415.m3u8
+#EXTINF:0,NBC Sports California
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2416.m3u8
+#EXTINF:0,NBC Sports Chicago
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2417.m3u8
+#EXTINF:0,NBC Sports Philadelphia
+#EXTVLCOPT:network-caching=1000
+http://envytv.xyz:25461/marGOR45/Spring21/57845
+#EXTINF:0,NBC Sports Network
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/418183
+#EXTINF:0,NESN
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/live/leedale%40nycap.rr.com/mY8TwKjP3J/418150.ts
+#EXTINF:0,Marquee Sports Network
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2731.m3u8
+#EXTINF:0,Sportsnet
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/265.m3u8
+#EXTINF:0,Sportsnet Ontario
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/264.m3u8
+#EXTINF:0,Sportsnet West
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/269.m3u8
+#EXTINF:0,Sportsnet East
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/263.m3u8
+#EXTINF:0,TSN 1
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/258.m3u8
+#EXTINF:0,TSN 2
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/259.m3u8
+#EXTINF:0,TSN 3
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/260.m3u8
+#EXTINF:0,TSN 4
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/261.m3u8
+#EXTINF:0,TSN 5
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/262.m3u8
+#EXTINF:0,WWE HD
+#EXTVLCOPT:network-caching=1000
+http://mytvstream.net:8080/tezj/1202Allday/260496
+#EXTINF:0,Spectrum Sportsnet LA
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/418164
+#EXTINF:0,Spectrum Sports Hawaii
+#EXTVLCOPT:network-caching=1000
+http://line.stayconnected.pro:80/play/live.php?mac=A0:BB:3E:02:3C:46&stream=1597020&extension=ts&play_token=KfrodSkzSW
+#EXTINF:0,Space City Home Network
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/418153
+#EXTINF:0,Altitude Sports
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/418152
+#EXTINF:0,Golf Channel
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/418180
+#EXTINF:0,Olympic Channel
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/418193
+#EXTINF:0,TNT Sports 1
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/312.m3u8
+#EXTINF:0,TNT Sports 2
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/313.m3u8
+#EXTINF:0,TNT Sports 3
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/314.m3u8
+#EXTINF:0,TNT Sports 4
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2451.m3u8
+#EXTINF:0,TNT Sports Ultimate
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2449.m3u8
+#EXTINF:0,Sky Sports Box Office
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/3542.m3u8
+#EXTINF:0,Sky Sports Main Event
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/531.m3u8
+#EXTINF:0,Sky Sports Cricket
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/532.m3u8
+#EXTINF:0,Sky Sports Action
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/533.m3u8
+#EXTINF:0,Sky Sports Golf
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/535.m3u8
+#EXTINF:0,Sky Sports Premier League
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/536.m3u8
+#EXTINF:0,Sky Sports F1
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/674.m3u8
+#EXTINF:0,Sky Sports Tennis
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2460.m3u8
+#EXTINF:0,Sky Sports Football
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2473.m3u8
+#EXTINF:0,Sky Sports Mix
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2474.m3u8
+#EXTINF:0,Sky Sports Racing
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2893.m3u8
+#EXTINF:0,Sky Sports Rugby
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2452.m3u8
+#EXTINF:0,Sky Sports News
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/562.m3u8
+#EXTINF:0,Premier Sports 1
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2908.m3u8
+#EXTINF:0,Premier Sports 2
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/2907.m3u8
+#EXTINF:0,Fanduel Sports Detroit
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/6714.m3u8
+#EXTINF:0,Fanduel Sports Florida
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/6715.m3u8
+#EXTINF:0,Fanduel Sports Indiana
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/6716.m3u8
+#EXTINF:0,Fanduel Sports Kansas City
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/6717.m3u8
+#EXTINF:0,Fanduel Sports Midwest
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/6719.m3u8
+#EXTINF:0,Fanduel Sports North
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/6718.m3u8
+#EXTINF:0,Fanduel Sports Ohio
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/6720.m3u8
+#EXTINF:0,Fanduel Sports Oklahoma
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/6721.m3u8
+#EXTINF:0,Fanduel Sports SoCal
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/6722.m3u8
+#EXTINF:0,Fanduel Sports South
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/6723.m3u8
+#EXTINF:0,Fanduel Sports Southeast
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/6724.m3u8
+#EXTINF:0,Fanduel Sports Southwest
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/6725.m3u8
+#EXTINF:0,Fanduel Sports Sun
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/6726.m3u8
+#EXTINF:0,Fanduel Sports West
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/6727.m3u8
+#EXTINF:0,Fanduel Sports Wisconsin
+#EXTVLCOPT:network-caching=1000
+https://yupptv.rkdyiptv.workers.dev/live/6728.m3u8
+#EXTINF:0,BEIN Sport 1
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2209.m3u8
+#EXTINF:0,BEIN Sport 2
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2608.m3u8
+#EXTINF:0,BEIN Sport 3
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2609.m3u8
+#EXTINF:0,BEIN Sport 4
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2610.m3u8
+#EXTINF:0,BEIN Sport 5
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2611.m3u8
+#EXTINF:0,Atlanta Hawks
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5053.m3u8
+#EXTINF:0,Boston Celtics
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5054.m3u8
+#EXTINF:0,Brooklyn Nets
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5055.m3u8
+#EXTINF:0,Charlotte Hornets
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5056.m3u8
+#EXTINF:0,Chicago Bulls
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5057.m3u8
+#EXTINF:0,Cleveland Cavaliers
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5058.m3u8
+#EXTINF:0,Dallas Mavericks
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5059.m3u8
+#EXTINF:0,Denver Nuggets
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5060.m3u8
+#EXTINF:0,Detroit Pistons
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5061.m3u8
+#EXTINF:0,Golden State Warriors
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5062.m3u8
+#EXTINF:0,Houston Rockets
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5063.m3u8
+#EXTINF:0,Indiana Pacers
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5064.m3u8
+#EXTINF:0,Los Angeles Lakers
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5065.m3u8
+#EXTINF:0,Los Angeles Clippers
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5066.m3u8
+#EXTINF:0,Memphis Grizzlies
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5067.m3u8
+#EXTINF:0,Miami Heat
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5068.m3u8
+#EXTINF:0,Milwaukee Bucks
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5069.m3u8
+#EXTINF:0,Minnesota Timberwolves
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5070.m3u8
+#EXTINF:0,New Orleans Pelicans
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5071.m3u8
+#EXTINF:0,New York Knicks
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5072.m3u8
+#EXTINF:0,Oklahoma City Thunder
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5073.m3u8
+#EXTINF:0,Orlando Magic
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5074.m3u8
+#EXTINF:0,Philadelphia 76ers
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5075.m3u8
+#EXTINF:0,Phoenix Suns
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5076.m3u8
+#EXTINF:0,Portland Trail Blazers
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5077.m3u8
+#EXTINF:0,Sacramento Kings
+#EXTVLCOPT:network-caching=1000
+hhttps://airtel.rkdyiptv.workers.dev/live/5078.m3u8
+#EXTINF:0,San Antonio Spurs
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5079.m3u8
+#EXTINF:0,Toronto Raptors
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5080.m3u8
+#EXTINF:0,Utah Jazz
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5081.m3u8
+#EXTINF:0,Washington Wizards
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5082.m3u8
+#EXTINF:0,Anaheim Ducks
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4989.m3u8
+#EXTINF:0,Boston Bruins
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4990.m3u8
+#EXTINF:0,Boston Celtics
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5054.m3u8
+#EXTINF:0,Boston Red Sox
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2345.m3u8
+#EXTINF:0,Calgary Flames
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4992.m3u8
+#EXTINF:0,Detroit Pistons
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5061.m3u8
+#EXTINF:0,Los Angeles Dodgers
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2355.m3u8
+#EXTINF:0,New York Rangers
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5007.m3u8
+#EXTINF:0,New York Mets
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2359.m3u8
+#EXTINF:0,Orlando Magic
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/5074.m3u8
+#EXTINF:0,Stan Sport 1
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4895.m3u8
+#EXTINF:0,Stan Sport 2
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4896.m3u8
+#EXTINF:0,Stan Sport 3
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4897.m3u8
+#EXTINF:0,Stan Sport 4
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4898.m3u8
+#EXTINF:0,Stan Sport 5
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4899.m3u8
+#EXTINF:0,Stan Sport 6
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4900.m3u8
+#EXTINF:0,Stan Sport 7
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4901.m3u8
+#EXTINF:0,Stan Sport 8
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4902.m3u8
+#EXTINF:0,Stan Sport 9
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4903.m3u8
+#EXTINF:0,Stan Sport 10
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4904.m3u8
+#EXTINF:0,Stan Sport 11
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4905.m3u8
+#EXTINF:0,Stan Sport 12
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4906.m3u8
+#EXTINF:0,Stan Sport 13
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4907.m3u8
+#EXTINF:0,Stan Sport 14
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4908.m3u8
+#EXTINF:0,Stan Sport 15
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4909.m3u8
+#EXTINF:0,Stan Sport 16
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4910.m3u8
+#EXTINF:0,Stan Sport 17
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4911.m3u8
+#EXTINF:0,Stan Sport 18
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4912.m3u8
+#EXTINF:0,Stan Sport 19
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4913.m3u8
+#EXTINF:0,Stan Sport 20
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4914.m3u8
+#EXTINF:0,Stan Sport 21
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4915.m3u8
+#EXTINF:0,Stan Sport 22
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4916.m3u8
+#EXTINF:0,Stan Sport 23
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4917.m3u8
+#EXTINF:0,Stan Sport 24
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4918.m3u8
+#EXTINF:0,Stan Sport 25
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4919.m3u8
+#EXTINF:0,Stan Sport 26
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4920.m3u8
+#EXTINF:0,Stan Sport 27
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4921.m3u8
+#EXTINF:0,Stan Sport 28
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4922.m3u8
+#EXTINF:0,Stan Sport 29
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4923.m3u8
+#EXTINF:0,Stan Sport 30
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4924.m3u8
+#EXTINF:0,Peacock 1
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4408.m3u8
+#EXTINF:0,Peacock 2
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4409.m3u8
+#EXTINF:0,Peacock 3
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4410.m3u8
+#EXTINF:0,Peacock 4
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4411.m3u8
+#EXTINF:0,Peacock 5
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/4412.m3u8
+#EXTINF:0,UFC 1
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/312.m3u8
+#EXTINF:0,UFC Main Card
+#EXTVLCOPT:network-caching=1000
+https://airtel.rkdyiptv.workers.dev/live/2449.m3u8
+#EXTINF:0,UFC Backup
+#EXTVLCOPT:network-caching=1000
+http://sky-glass.live:80/Jason1/Jason2/405657
+#EXTINF:0,UFC Backup 1
+#EXTVLCOPT:network-caching=1000
+http://sky-glass.live:80/Jason1/Jason2/35796
+#EXTINF:0,Disney Channel
+#EXTVLCOPT:network-caching=1000
+http://sky-glass.live:80/Luke1/Luke2/611292
+#EXTINF:0,24/7 Disney Movies
+#EXTVLCOPT:network-caching=1000
+http://sky-glass.live:80/Luke1/Luke2/973372
+#EXTINF:0,24/7 Disney Songs
+#EXTVLCOPT:network-caching=1000
+http://sky-glass.live:80/Luke1/Luke2/973370
+#EXTINF:0,Disney Junior
+#EXTVLCOPT:network-caching=1000
+http://sky-glass.live:80/Luke1/Luke2/617718
+#EXTINF:0,Disney XD
+#EXTVLCOPT:network-caching=1000
+http://sky-glass.live:80/Luke1/Luke2/611296
+#EXTINF:0,Bluey
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/681865
+#EXTINF:0,24/7: SNL
+#EXTVLCOPT:network-caching=1000
+http://mag.trx-ott.com:80/play/live.php?mac=00:1A:79:E7:E9:64&stream=1918082&extension=ts&play_token=eIwSEcd8PY
+#EXTINF:0,24/7: 24
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/681767
+#EXTINF:0,24/7: 30 Rock
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/681770
+#EXTINF:0,24/7: Arthur
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/681821
+#EXTINF:0,24/7: Becker
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/681846
+#EXTINF:0,24/7: Bondi Rescue
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/681870
+#EXTINF:0,24/7: Brooklyn Nine-Nine
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/681881
+#EXTINF:0,24/7: Curb Your Enthusiasm
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/681923
+#EXTINF:0,24/7: ESPN 30 For 30
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/681983
+#EXTINF:0,24/7: Everybody Loves Raymond
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/681985
+#EXTINF:0,24/7: Family Guy
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/681990
+#EXTINF:0,24/7: Formula 1 Drive to Survive
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682009
+#EXTINF:0,24/7: Frasier
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682014
+#EXTINF:0,24/7: Friends
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682019
+#EXTINF:0,24/7: Futurama
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682024
+#EXTINF:0,24/7: How I Met Your Mother
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682094
+#EXTINF:0,24/7: King of the Hill
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682138
+#EXTINF:0,24/7: Law and Order SVU
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682153
+#EXTINF:0,24/7: Lost
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682174
+#EXTINF:0,24/7: Mad Men
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682182
+#EXTINF:0,24/7: NCIS Los Angeles
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682253
+#EXTINF:0,24/7: Parks and Recreation
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682281
+#EXTINF:0,24/7: Seinfeld
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682372
+#EXTINF:0,24/7: Sex and the City
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682375
+#EXTINF:0,24/7: The King of Queens
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682538
+#EXTINF:0,24/7: The O.C.
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682571
+#EXTINF:0,24/7: The Office US
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682576
+#EXTINF:0,24/7: The Simpsons
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682617
+#EXTINF:0,24/7: Two and a Half Men
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682674
+#EXTINF:0,24/7: Underbelly
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682682
+#EXTINF:0,24/7: Vanderpump Rules
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682694
+#EXTINF:0,24/7: Veep
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682695
+#EXTINF:0,24/7: Wallace and Gromit
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682706
+#EXTINF:0,24/7: Whose Line Is It Anyway USA (1998)
+#EXTVLCOPT:network-caching=1000
+http://websafety101.net:5050/stone149@gmail.com/AuMesPyCFC/682719
+#EXTM3U
+#EXTINF:20,Dazn Eleven 1
+#EXTVLCOPT:network-caching=1000
+http://znty.dyndns.org:5010/hls/eleven1.m3u8
+#EXTINF:0,Dazn Eleven 2
+#EXTVLCOPT:network-caching=1000
+http://znty.dyndns.org:5010/hls/eleven2.m3u8
+#EXTINF:0,Dazn Eleven 3
+#EXTVLCOPT:network-caching=1000
+http://znty.dyndns.org:5010/hls/eleven3.m3u8
+#EXTINF:0,Dazn Eleven 4
+#EXTVLCOPT:network-caching=1000
+http://znty.dyndns.org:5010/hls/eleven4.m3u8
+#EXTINF:0,Dazn Eleven 5
+#EXTVLCOPT:network-caching=1000
+http://znty.dyndns.org:5010/hls/eleven5.m3u8
+#EXTINF:0,21:30 | Castellon - Cadiz | #EXTVLCOPT:network-caching=1000
+https://andro.226503.xyz/checklist/androstreamlivess1.m3u8
+#EXTINF:0,21:45 | Partick Thistle - Dunfermline | #EXTVLCOPT:network-caching=1000
+https://andro.226503.xyz/checklist/androstreamliveexn2.m3u8
+#EXTINF:0,22:00 | Aston Villa - Liverpool (Azeri) | #EXTVLCOPT:network-caching=1000
+https://andro.226503.xyz/checklist/androstreamliveidm.m3u8
+#EXTINF:0,22:00 | Aston Villa - Liverpool | #EXTVLCOPT:network-caching=1000
+https://andro.226503.xyz/checklist/androstreamlivebs3.m3u8
+#EXTINF:0,2TV Sport #EXTVLCOPT:network-caching=1000
+https://tv.cdn.xsg.ge/gpb-2tv/index.m3u8
+#EXTINF:0,A SPOR
+#EXTVLCOPT:network-caching=1000
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor_720p.m3u8
+#EXTINF:0,A SPOR
+#EXTVLCOPT:network-caching=1000
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor_480p.m3u8
+#EXTINF:0,ARENA SPORT 1 #EXTVLCOPT:network-caching=1000
+http://88.212.15.19/live/test_arenasport/playlist.m3u8
+#EXTINF:0,Astrakhan.RU Sport HD
+#EXTVLCOPT:network-caching=1000
+http://streaming.astrakhan.ru/astrakhanrusporthd/playlist.m3u8
+#EXTINF:0,Astro
+#EXTVLCOPT:network-caching=1000
+https://raw.githubusercontent.com/B-inal-123/s-asia/inal-22/AstroSSB3.m3u8
+#EXTINF:0,BeIN Sport 1 HD Serbia
+#EXTVLCOPT:network-caching=1000
+http://ua.online24.pm/play/1101/350B326FB34F4B8/video.m3u8
+#EXTINF:0,BeIN Sport 1 HD #EXTVLCOPT:network-caching=1000
+http://s.only4.tv/5588/index.m3u8
+#EXTINF:0,BeIN Sport 2 HD Serbia
+#EXTVLCOPT:network-caching=1000
+http://ua.online24.pm/play/1102/350B326FB34F4B8/video.m3u8
+#EXTINF:0,Bein Sport 3 #EXTVLCOPT:network-caching=1000
+http://145.239.5.177:80/559/index.m3u8
+#EXTINF:0,CANAL + Sport #EXTVLCOPT:network-caching=1000
+http://151.80.18.177:86/Canal+_sport_HD/index.m3u8
+#EXTINF:0,Canal+ HD
+#EXTVLCOPT:network-caching=1000
+http://151.80.18.177:86/Canal+_HD/index.m3u8
+#EXTINF:0,Diema Sport
+#EXTVLCOPT:network-caching=1000
+http://213.169.39.30:5134
+#EXTINF:0,Diema Sport 1 #EXTVLCOPT:network-caching=1000
+http://92.247.25.42:11170/
+#EXTINF:0,Diema Sport 2
+#EXTVLCOPT:network-caching=1000
+http://213.169.39.30:5136
+#EXTINF:0,Diema Sport 2 HD #EXTVLCOPT:network-caching=1000
+http://de.online24.pm/play/51003/0E5BF0B5A9755BD/video.m3u8
+#EXTINF:0,Diema Sport 2 #EXTVLCOPT:network-caching=1000
+http://92.247.25.42:11172/
+#EXTINF:0,Diema Sport 3
+#EXTVLCOPT:network-caching=1000
+http://213.169.39.30:5216
+#EXTINF:0,DIGI Sport 1 HD RO
+#EXTVLCOPT:network-caching=1000
+http://46.149.191.217:9000/play/a04d
+#EXTINF:0,Digi Sport 1 #EXTVLCOPT:network-caching=1000
+http://91.201.172.14:35005/
+#EXTINF:0,DSPORTS 1 #EXTVLCOPT:network-caching=1000
+http://190.117.20.39:8000/play/a08d/index.m3u8
+#EXTINF:0,DSPORTS 1 #EXTVLCOPT:network-caching=1000
+http://190.117.20.37:8000/play/a08d/index.m3u8
+#EXTINF:0,DSPORTS 1 #EXTVLCOPT:network-caching=1000
+http://201.230.121.85:8000/play/a0yv/index.m3u8
+#EXTINF:0,ESPN 2 #EXTVLCOPT:network-caching=1000
+http://191.97.49.82:8001/play/a00m/index.m3u8
+#EXTINF:0,ESPN 2 #EXTVLCOPT:network-caching=1000
+http://181.205.130.194:4000/play/a07i
+#EXTINF:0,ESPN 2 #EXTVLCOPT:network-caching=1000
+http://200.10.30.241:8000/play/a01r/index.m3u8
+#EXTINF:0,Espn 4
+#EXTVLCOPT:network-caching=1000
+http://181.224.200.5:2277/play/a02o/index.m3u8
+#EXTINF:0,ESPN #EXTVLCOPT:network-caching=1000
+http://45.173.74.2:2010/play/a08a/index.m3u8
+#EXTINF:0,ESPN #EXTVLCOPT:network-caching=1000
+http://181.118.156.46:8000/play/a04g/index.m3u8
+#EXTINF:0,ESPN2
+#EXTVLCOPT:network-caching=1000
+http://41.223.30.230/ESPN2/index.m3u8
+#EXTINF:0,Euro Sport 2 HD
+#EXTVLCOPT:network-caching=1000
+http://79.127.207.193:80/Eurosport2HD/playlist.m3u8
+#EXTINF:0,Euro Sport 2 HD
+#EXTVLCOPT:network-caching=1000
+http://151.80.18.177:86/Eurosport_2_HD/index.m3u8
+#EXTINF:0,FOXONE
+#EXTVLCOPT:network-caching=1000
+http://45.172.92.111:8000/play/a02d/index.m3u8
+#EXTINF:0,FOXONE
+#EXTVLCOPT:network-caching=1000
+http://45.5.119.43:4000/play/a02v/index.m3u8
+#EXTINF:0,FOX CR
+#EXTVLCOPT:network-caching=1000
+http://8.243.126.131:8000/play/a0oq/index.m3u8
+#EXTINF:0,FOXONE
+#EXTVLCOPT:network-caching=1000
+http://8.243.126.131:8000/play/a0ih/index.m3u8
+#EXTINF:0,FOXONE
+#EXTVLCOPT:network-caching=1000
+http://45.228.234.62:8000/play/a05i/index.m3u8
+#EXTINF:0,FOXONE
+#EXTVLCOPT:network-caching=1000
+http://200.229.147.210:9999/play/a0as/index.m3u8
+#EXTINF:0,FOXONE
+#EXTVLCOPT:network-caching=1000
+http://200.229.147.142:8000/play/a03i/index.m3u8
+#EXTINF:0,FOXONE
+#EXTVLCOPT:network-caching=1000
+http://187.245.231.226:8000/play/a0og/index.m3u8
+#EXTINF:0,FOXONE
+#EXTVLCOPT:network-caching=1000
+http://181.119.108.27:7292/play/a02v/index.m3u8
+#EXTINF:0,FOXONE
+#EXTVLCOPT:network-caching=1000
+http://186.33.25.234:8125/play/a04p/index.m3u8
+#EXTINF:0,DSPORTS HD
+#EXTVLCOPT:network-caching=1000
+http://cablemaxsigloxxi.com:8000/play/a0l4/index.m3u8
+#EXTINF:0,Directv sport
+#EXTVLCOPT:network-caching=1000
+http://38.210.3.64:8090/play/a0je/index.m3u8
+#EXTINF:0,Directv sport
+#EXTVLCOPT:network-caching=1000
+http://8.243.126.131:8000/play/a05a/index.m3u8
+#EXTINF:0,Directv sport
+#EXTVLCOPT:network-caching=1000
+http://201.240.104.137:8000/play/a0aa/index.m3u8
+#EXTINF:0,Directv sport
+#EXTVLCOPT:network-caching=1000
+http://200.60.124.20:29000/play/a081/index.m3u8
+#EXTINF:0,Directv sport
+#EXTVLCOPT:network-caching=1000
+http://181.224.255.210:8001/play/a0s8/index.m3u8
+#EXTINF:0,DSPORTS2 HD
+#EXTVLCOPT:network-caching=1000
+http://200.59.188.3:8000/play/a0xe
+#EXTINF:0,TUDN HD
+#EXTVLCOPT:network-caching=1000
+http://74.208.30.121/a192/mono.m3u8
+#EXTINF:0,TUDN
+#EXTVLCOPT:network-caching=1000
+http://45.5.119.43:4000/play/a05q/index.m3u8
+#EXTINF:0,37) TUDN
+#EXTVLCOPT:network-caching=1000
+http://45.228.234.62:8000/play/a00a/index.m3u8
+#EXTINF:0,TUDN
+#EXTVLCOPT:network-caching=1000
+http://45.186.105.214:8000/play/a05r/index.m3u8
+#EXTINF:0,TUDN
+#EXTVLCOPT:network-caching=1000
+http://200.229.147.142:8000/play/a096/index.m3u8
+#EXTINF:0,TUDN
+#EXTVLCOPT:network-caching=1000
+http://24.152.53.3:8090/play/a012/index.m3u8
+#EXTINF:0,TUDN
+#EXTVLCOPT:network-caching=1000
+http://187.245.231.226:8000/play/a0ut/index.m3u8
+#EXTINF:0,TUDN 4K
+#EXTVLCOPT:network-caching=1000
+http://177.10.184.60:8002/play/a013/index.m3u8
+#EXTINF:0,TUDN 4K
+#EXTVLCOPT:network-caching=1000
+http://190.83.9.222:8000/play/ca040/index.m3u8
+#EXTINF:0,TUDN
+#EXTVLCOPT:network-caching=1000
+http://190.83.9.222:8000/play/ca099/index.m3u8
+#EXTINF:0,TUD SD
+#EXTVLCOPT:network-caching=1000
+http://45.171.64.30:8800/play/a07e
+#EXTINF:0,TUD SD
+#EXTVLCOPT:network-caching=1000
+http://200.229.147.210:9999/play/a01v/index.m3u8
+#EXTINF:0,TD+ HD
+#EXTVLCOPT:network-caching=1000
+http://200.229.147.210:9999/play/a00g/index.m3u8
+#EXTINF:0,TD+ HD
+#EXTVLCOPT:network-caching=1000
+http://200.229.147.142:8000/play/a00d/index.m3u8
+#EXTINF:0,TD+ HD
+#EXTVLCOPT:network-caching=1000
+http://200.115.96.66:4000/play/a02i/index.m3u8
+#EXTINF:0,TD+2 HD
+#EXTVLCOPT:network-caching=1000
+http://200.229.147.210:9999/play/a00h/index.m3u8
+#EXTINF:0,TD+2 HD
+#EXTVLCOPT:network-caching=1000
+http://200.229.147.142:8000/play/a00e/index.m3u8
+#EXTINF:0,TD+2 HD
+#EXTVLCOPT:network-caching=1000
+http://200.115.96.66:4000/play/a02h/index.m3u8
+#EXTINF:0,Deportes tvc
+#EXTVLCOPT:network-caching=1000
+http://200.229.147.142:8000/play/a04k/index.m3u8
+#EXTINF:0,Deportes tvc
+#EXTVLCOPT:network-caching=1000
+http://200.229.147.142:8000/play/a05g/index.m3u8
+#EXTINF:0,Deportes tvc
+#EXTVLCOPT:network-caching=1000
+http://200.115.96.66:4000/play/a005/index.m3u8
+#EXTINF:0,Deportes tvc
+#EXTVLCOPT:network-caching=1000
+http://200.115.96.66:4000/play/a001/index.m3u8
+#EXTINF:0,Deportes tvc
+#EXTVLCOPT:network-caching=1000
+http://200.115.96.66:4000/play/a0dn/index.m3u8
+#EXTINF:0,Win Sports
+#EXTVLCOPT:network-caching=1000
+http://181.78.8.199:8000/play/a0cc/index.m3u8
+#EXTINF:0,Win Sports
+#EXTVLCOPT:network-caching=1000
+http://181.78.211.244:8005/play/a0am/index.m3u8
+#EXTINF:0,Win Sports
+#EXTVLCOPT:network-caching=1000
+http://181.78.21.46:8009/play/a02s
+#EXTINF:0,Win Sports+
+#EXTVLCOPT:network-caching=1000
+http://181.78.8.199:8000/play/a06v/index.m3u8
+#EXTINF:0,Win Sports+
+#EXTVLCOPT:network-caching=1000
+http://181.205.205.173:8888/play/a0ul/index.m3u8
+#EXTINF:0,Tigo Sports HD
+#EXTVLCOPT:network-caching=1000
+http://45.5.118.152:8000/play/a08x/index.m3u8
+#EXTINF:0,Tigo Sports HD
+#EXTVLCOPT:network-caching=1000
+http://45.228.234.62:8000/play/a00h/index.m3u8
+#EXTINF:0,Tigo Sports+ HD
+#EXTVLCOPT:network-caching=1000
+http://45.171.64.30:2000/play/a08e/index.m3u8
+#EXTINF:0,Tigo Sports HD lento
+#EXTVLCOPT:network-caching=1000
+http://45.5.119.43:4000/play/a05t/index.m3u8
+#EXTINF:0,DSPORTS HD
+#EXTVLCOPT:network-caching=1000
+https://futbol9865.ultratv13.workers.dev/deportivo111/94.m3u8
+#EXTINF:0,DSPORTS2 HD
+#EXTVLCOPT:network-caching=1000
+https://futbol9865.ultratv13.workers.dev/deportivo111/95.m3u8
+#EXTINF:0,TUDN HD
+#EXTVLCOPT:network-caching=1000
+https://futbol9865.ultratv13.workers.dev/deportivo111/68.m3u8
+#EXTINF:0,TUDN HD OP2
+#EXTVLCOPT:network-caching=1000
+https://futbol9865.ultratv13.workers.dev/deportivo111/106.m3u8
+#EXTINF:0,TUDN HD OP3
+#EXTVLCOPT:network-caching=1000
+https://futbol9865.ultratv13.workers.dev/deportivo111/107.m3u8
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://193.25.8.59:8000/fut2
+#EXTINF:0,SKY SPORT LALIGA #EXTVLCOPT:network-caching=1000
+http://179.60.224.196:8000/play/a0i7/index.m3u8
+#EXTINF:0,LIG #EXTVLCOPT:network-caching=1000
+http://200.115.120.1:8000/play/ca124/index.m3u8
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://cdntv.online/low/9mlxywika2/56.m3u8
+#EXTINF:0,TDM Desporto #EXTVLCOPT:network-caching=1000
+http://cdn6.163189.xyz/163189/amty
+#EXTINF:0,IDMANTV #EXTVLCOPT:network-caching=1000
+https://str2.yodacdn.net/idman_300_to_small/tracks-v1a1/mono.m3u8
+#EXTINF:0,MAX SPORT 4 #EXTVLCOPT:network-caching=1000
+http://77.46.130.252:99/maxsport4
+#EXTINF:0,SKY SPORT LALIGA #EXTVLCOPT:network-caching=1000
+http://181.78.109.48:9998/play/a06r/index.m3u8
+#EXTINF:0,OTT CLUB #EXTVLCOPT:network-caching=1000
+http://czrb8vng.ottclub.xyz/iptv/AHMQNVLWUTM5PW/6554/index.m3u8
+#EXTINF:0,Digi Sport 2 #EXTVLCOPT:network-caching=1000
+http://91.201.172.14:35006/
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://catchup.videoline.ru/match/tracks-v1a1/mono.m3u8
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://bl.video.matchtv.ru/media/playlist/free_d46d0cf1712c0542ec7fd4f0808f600a_hd/17_89756005/1080/e6bef86de8a133cd7b27deb040758a00/4796141934.m3u8
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://cdntv.online/low/9mlxywika2/48.m3u8
+#EXTINF:0,TNT SPORTS PREMIUM #EXTVLCOPT:network-caching=1000
+http://200.115.120.1:8000/play/ca040/index.m3u8
+#EXTINF:0,BEIN 3 #EXTVLCOPT:network-caching=1000
+http://145.239.5.177/559/mpegts
+#EXTINF:0,Setenta Sport 1 #EXTVLCOPT:network-caching=1000
+http://cdntv.online/low/9mlxywika2/1021.m3u8
+#EXTINF:0,Setenta Sport 2 #EXTVLCOPT:network-caching=1000
+http://cdntv.online/low/9mlxywika2/1022.m3u8
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://tv.tuva.ru/machtv/index.m3u8
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://185.46.48.18:80/match/tracks-v1a1/mono.m3u8
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://5.188.221.43:8080/play/match
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://95.47.155.244:8001/play/a003
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://193.25.8.59:8000/fut
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://cdntv.online/low/9mlxywika2/55.m3u8
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://185.57.68.33/110/mpegts
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://185.57.68.33:8091/110/playlist.m3u8
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://cdntv.online/low/9mlxywika2/57.m3u8
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://185.57.68.33:80/110/index.m3u8
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://46.149.191.217:9010/play/a019
+#EXTINF:0,Setanta Sport #EXTVLCOPT:network-caching=1000
+http://217.174.225.146/hls/ch004_720/index.m3u8
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+https://tva.in.ua/live/susp-sport.m3u8
+#EXTINF:0,Super Sport 1 #EXTVLCOPT:network-caching=1000
+http://93.93.113.95:25461/TV-Berati/XtreamCodes/494
+#EXTINF:0,Super Sport 2 #EXTVLCOPT:network-caching=1000
+http://93.93.113.95:25461/TV-Berati/XtreamCodes/495
+#EXTINF:0,RTSH Sport #EXTVLCOPT:network-caching=1000
+http://217.73.139.200:5443/play/a01d
+#EXTINF:0,NOVA SPORT 1 HD #EXTVLCOPT:network-caching=1000
+http://wo0dyefk.dienalt.org/iptv/DV3AC2Q6YSR9XE/2555/index.m3u8
+#EXTINF:0,CT SPORT HD #EXTVLCOPT:network-caching=1000
+http://88.212.15.19/live/test_ctsport_25p/playlist.m3u8
+#EXTINF:0,SPORT 1 HD #EXTVLCOPT:network-caching=1000
+http://88.212.15.19/live/test_sport1_25p/playlist.m3u8
+#EXTINF:0,SPORT 2 HD #EXTVLCOPT:network-caching=1000
+http://88.212.15.19/live/test_sport_2/playlist.m3u8
+#EXTINF:0,ARENA SPORT 2 #EXTVLCOPT:network-caching=1000
+http://88.212.15.19/live/test_arenasport_dva/playlist.m3u8
+#EXTINF:0,MAX SPORT 1 #EXTVLCOPT:network-caching=1000
+http://77.46.130.252:99/maxsport1
+#EXTINF:0,MAX SPORT 2 #EXTVLCOPT:network-caching=1000
+http://77.46.130.252:99/maxsport2
+#EXTINF:0,MAX SPORT 3 #EXTVLCOPT:network-caching=1000
+http://77.46.130.252:99/maxsport3
+#EXTINF:0,M4 Sport #EXTVLCOPT:network-caching=1000
+http://46.149.191.217:9010/play/a017
+#EXTINF:0,Sportdigital #EXTVLCOPT:network-caching=1000
+https://jmp2.uk/stvp-ATAJ0500433A
+#EXTINF:0,ZIGGO SPORT 2 HD #EXTVLCOPT:network-caching=1000
+http://wo0dyefk.dienalt.org/iptv/DV3AC2Q6YSR9XE/2561/index.m3u8
+#EXTINF:0,ZIGGO SPORT 3 HD #EXTVLCOPT:network-caching=1000
+http://wo0dyefk.dienalt.org/iptv/DV3AC2Q6YSR9XE/2559/index.m3u8
+#EXTINF:0,ZIGGO SPORT LIVE #EXTVLCOPT:network-caching=1000
+http://wo0dyefk.dienalt.org/iptv/DV3AC2Q6YSR9XE/2560/index.m3u8
+#EXTINF:0,ORF+ #EXTVLCOPT:network-caching=1000
+http://212.186.45.34:9981/stream/channelid/906723447
+#EXTINF:0,5 SPORT #EXTVLCOPT:network-caching=1000
+http://wo0dyefk.dienalt.org/iptv/DV3AC2Q6YSR9XE/2558/index.m3u8
+#EXTINF:0,TELEFE #EXTVLCOPT:network-caching=1000
+http://200.115.120.1:8000/play/ca016/index.m3u8
+#EXTINF:0,CAZE TV 1 #EXTVLCOPT:network-caching=1000
+https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8
+#EXTINF:0,REAL MADRID TV #EXTVLCOPT:network-caching=1000
+https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/bitrate_3.m3u8
+#EXTINF:0,BEIN SPORT EXTRA   #EXTVLCOPT:network-caching=1000
+https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8
+#EXTINF:0,ESPN 5 #EXTVLCOPT:network-caching=1000
+http://190.0.247.38:8000/play/a012
+#EXTINF:0,TELECOSTA GUATEMALA #EXTVLCOPT:network-caching=1000
+https://tv91.hostingnuclear.com:19360/telecosta/telecosta.m3u8
+#EXTINF:0,WIN SPORT #EXTVLCOPT:network-caching=1000
+http://190.0.247.38:8000/play/a068
+#EXTINF:0,WIN SPORT #EXTVLCOPT:network-caching=1000
+http://181.205.205.173:8888/play/a0h0/index.m3u8
+#EXTINF:0,TELEMUNDO #EXTVLCOPT:network-caching=1000
+https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream1/master.m3u8
+#EXTINF:0,MTR Sports-1 #EXTVLCOPT:network-caching=1000
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg02873-kravemedia-mtrspt1-distrotv/playlist.m3u8
+#EXTINF:0,X SPORT #EXTVLCOPT:network-caching=1000
+http://iptv.prosto.tv:7000/ch109/video.m3u8
+#EXTINF:0,Turkmenistan Sport #EXTVLCOPT:network-caching=1000
+https://alpha.tv.online.tm/legacyhls/ch004_720/index.m3u8
+#EXTINF:0,Turkmenistan Sport #EXTVLCOPT:network-caching=1000
+http://217.174.225.146/legacyhls/ch004_720/index.m3u8
+#EXTINF:0,TR Sport (480p) #EXTVLCOPT:network-caching=1000
+https://livetr.teleromagna.it/mia/live/playlist.m3u8
+#EXTINF:0,L`Equipe #EXTVLCOPT:network-caching=1000
+https://jmp2.uk/stvp-FR200016Y5
+#EXTINF:0,ON Sports+ #EXTVLCOPT:network-caching=1000
+https://freem3u.xyz/api/live/play.m3u8
+#EXTINF:0,Fox Sports #EXTVLCOPT:network-caching=1000
+http://y3fqd48g.megatv.fun/iptv/NRLXRWSBWBPLN4/19146/index.m3u8
+#EXTINF:0,MMN Sport #EXTVLCOPT:network-caching=1000
+http://mmn.mypsx.net:1935/live/mmnhdsport/chunklist.m3u8
+#EXTINF:0,MASR #EXTVLCOPT:network-caching=1000
+https://shls-masr-ak.akamaized.net/out/v1/d5036cabf11e45bf9d0db410ca135c18/index.m3u8
+#EXTINF:0,TELETRAK #EXTVLCOPT:network-caching=1000
+http://unlimited6-cl.dps.live/sportinghd/sportinghd.smil/playlist.m3u8
+#EXTINF:0,Sport5 #EXTVLCOPT:network-caching=1000
+https://rgelive.akamaized.net/hls/live/2043151/radiolive/playlist.m3u8
+#EXTINF:0,Sport5 #EXTVLCOPT:network-caching=1000
+https://rgelive.akamaized.net/hls/live/2043095/live3/playlist.m3u8
+#EXTM3U
+#EXTINF:296,-2026_FC-WEB_1779005924089.jpg" group-title="Fancode" -  Band-e-Amir Region vs Amo Region (Supercola Regional List A Tournament, 2026)
+#EXTVLCOPT:network-caching=1000
+https://bd-mc-fblive.fancode.com/mumbai/142752_english_hls_c6c0ae4e2927340_1ta-di_h264/index.m3u8
+

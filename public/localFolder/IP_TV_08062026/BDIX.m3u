@@ -1,0 +1,329 @@
+#EXTM3U
+#EXTINF:0,116. Cricbuzz
+#EXTVLCOPT:network-caching=1000
+http://4kgood.org:80/live/4o48up5evz/r4fiast66u/1163988.ts
+#EXTINF:24,T SPORTS
+#EXTVLCOPT:network-caching=1000
+http://198.195.239.50:8095/Tsports/tracks-v1a1/mono.m3u8
+#EXTINF:0,T SPORTS
+#EXTVLCOPT:network-caching=1000
+http://27.124.71.27/T-Sports/index.m3u8
+#EXTINF:0,A SPORTS
+#EXTVLCOPT:network-caching=1000
+http://198.195.239.50:8095/Eurosport/tracks-v1a1/mono.m3u8?token=8291e6bc6d2a2935e204c1838f5730291810b4de-58cc706032206f29cde79dadc472229d-1775633452-1775629852
+#EXTINF:0,P SPORTS
+#EXTVLCOPT:network-caching=1000
+http://119.156.228.231:9983/stream/channelid/679185749?ticket=DED82FB8AE85893524A1035AAE7CD187020FFA04&profile=pass
+#EXTINF:0,Ten SPORTS
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge3/ten_sports/index.m3u8
+#EXTINF:0,Ten Cricket
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge3/ten_cricket/index.m3u8
+#EXTINF:0,EUROSPORT HD
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge3/euro_sports_hd/index.m3u8
+#EXTINF:0,Willow Sports
+#EXTVLCOPT:network-caching=1000
+http://27.124.71.27/Willow_Extra/index.m3u8
+#EXTINF:0,Willow 
+#EXTVLCOPT:network-caching=1000
+https://tvsen5.aynaott.com/willowhd/index.m3u8
+#EXTINF:0,STAR SPORTS 1
+#EXTVLCOPT:network-caching=1000
+http://198.195.239.50:8095/SonyTenSports5/tracks-v1a1/mono.m3u8
+#EXTINF:0,STAR SPORTS 2
+#EXTVLCOPT:network-caching=1000
+http://tvn1.chowdhury-shaheb.com/starsport2/index.m3u8
+#EXTINF:0,STAR SPORTS 3
+#EXTVLCOPT:network-caching=1000
+http://212.102.34.8:9080/AndFlixHD/video.m3u8
+#EXTINF:0,SONY SPORTS 1HD
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge3/sony_sports_1_hd/index.m3u8
+#EXTINF:0,SONY SPORTS 2 HD
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge3/sony_sports_2_hd/index.m3u8
+#EXTINF:0,SONY SPORTS 3 HD
+#EXTVLCOPT:network-caching=1000
+http://premimum.online/live/jen12345/jen54321/146.ts
+#EXTINF:0,SONY SPORTS 5 HD
+#EXTVLCOPT:network-caching=1000
+http://103.99.249.139/sonyten3/index.m3u8
+#EXTINF:0,STAR SPORTS SELECT 1 HD
+#EXTVLCOPT:network-caching=1000
+http://198.195.239.50:8095/StarSportsSelect1/tracks-v1a1/mono.m3u8
+#EXTINF:0,STAR SPORTS SELECT 2 HD
+#EXTVLCOPT:network-caching=1000
+http://198.195.239.50:8095/StarSportsSelect2/tracks-v1a1/mono.m3u8
+#EXTINF:0,BEIN SPORTS 
+#EXTVLCOPT:network-caching=1000
+http://27.124.71.27/beIN_Sports_1/index.m3u8
+#EXTINF:0,BEIN SPORTS 2
+#EXTVLCOPT:network-caching=1000
+http://27.124.71.27/beIN_Sports_2/index.m3u8
+#EXTINF:0,BEIN SPORTS 3
+#EXTVLCOPT:network-caching=1000
+http://27.124.71.27/beIN_Sports_3/index.m3u8
+#EXTINF:0,BEIN SPORTS 4
+#EXTVLCOPT:network-caching=1000
+https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8
+#EXTINF:0,TNT SPORTS 1
+#EXTVLCOPT:network-caching=1000
+http://27.124.71.27/TNT_Sports_1/index.m3u8
+#EXTINF:0,TNT SPORTS 2
+#EXTVLCOPT:network-caching=1000
+http://27.124.71.27/TNT_Sports_2/index.m3u8
+#EXTINF:0,TNT SPORTS 3
+#EXTVLCOPT:network-caching=1000
+http://27.124.71.27/TNT_Sports_3/index.m3u8
+#EXTINF:0,SKY SPORTS
+#EXTVLCOPT:network-caching=1000
+http://premimum.online/live/jen12345/jen54321/523.ts
+#EXTINF:0,Astro  football
+#EXTVLCOPT:network-caching=1000
+http://172.17.50.112:84/ant1008/tracks-v1a1/mono.m3u8
+#EXTINF:0,STAR SPORTS 1 JADOO
+#EXTVLCOPT:network-caching=1000
+http://172.17.50.112:84/ant1001/tracks-v1a1/mono.m3u8
+#EXTINF:0,T sports
+#EXTVLCOPT:network-caching=1000
+http://172.31.235.10:8080/hls/34-tsportssd/index.m3u8
+#EXTINF:0,Star Jalsa
+#EXTVLCOPT:network-caching=1000
+https://tvsen5.aynaott.com/gUX8BJmNc2yF/index.m3u8
+#EXTINF:0,Zee Bangla
+#EXTVLCOPT:network-caching=1000
+https://yupptvcatchupire.yuppcdn.net/preview/zeebangla/2500.m3u8
+#EXTINF:0,Zee Bangla
+#EXTVLCOPT:network-caching=1000
+https://tvsen6.aynaott.com/ZeeBangla/index.m3u8
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+http://198.195.239.50:8095/JalshaMovies/tracks-v1a1/mono.m3u8
+#EXTINF:0,Zee Bangla Chinena
+#EXTVLCOPT:network-caching=1000
+http://27.124.71.27/Zee_Bangla_Cinema/tracks-v1a1/mono.ts.m3u8
+#EXTINF:0,Sun Bangla
+#EXTVLCOPT:network-caching=1000
+http://27.124.71.27/Sun_Bangla/index.m3u8
+#EXTINF:0,Colors Bangla
+#EXTVLCOPT:network-caching=1000
+https://tvsen6.aynaott.com/ColorsBangla/index.m3u8
+#EXTINF:0,Colours Bangla Chinema
+#EXTVLCOPT:network-caching=1000
+http://premiumtvs.space:8080/live/6388578743/4853784376/271038.ts
+#EXTINF:0,Sony Aath
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge3/sonyaath/index.m3u8
+#EXTINF:0,#EXTVLCOPT:network-caching=1000
+https://live.thebosstv.com:30443/dwlive/AAKAASH-AATH/chunks.m3u8
+#EXTINF:0,Ente10 Bangla
+#EXTVLCOPT:network-caching=1000
+https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8
+#EXTINF:0,Nagorik TV
+#EXTVLCOPT:network-caching=1000
+http://172.31.235.10:8080/hls/32-nagorik/index.m3u8
+#EXTINF:0,BTV
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1709/output/1709.m3u8
+#EXTINF:0,Sangsad
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1713/output/index.m3u8
+#EXTINF:0,Somay
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1702/output/index.m3u8
+#EXTINF:0,Jamuna Tv
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1701/output/1701-audio_113312_eng=113200-video=1692000.m3u8
+#EXTINF:0,Channel 24
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1703/output/index.m3u8
+#EXTINF:0,EKTTOR tv
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1705/output/index.m3u8
+#EXTINF:0,INDEPENDENT TV
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1704/output/index.m3u8
+#EXTINF:0,ATN NEWS
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1706/output/index.m3u8
+#EXTINF:0,Banglavison
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1715/output/index.m3u8
+#EXTINF:0,Maasranga
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1722/output/index.m3u8
+#EXTINF:0,Deepto Tv
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1711/output/index.m3u8
+#EXTINF:0,ATN Bangla
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1722/output/index.m3u8
+#EXTINF:0,Channel i
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1723/output/index.m3u8
+#EXTINF:0,NTV
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1716/output/index.m3u8
+#EXTINF:0,News 24
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1708/output/index.m3u8
+#EXTINF:0,SA TV
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1720/output/index.m3u8
+#EXTINF:0,Star News
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1710/output/index.m3u8
+#EXTINF:0,DBC News
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1728/output/index.m3u8
+#EXTINF:0,Channel 9
+#EXTVLCOPT:network-caching=1000
+https://owrcovcrpy.gpcdn.net/bpk-tv/1729/output/index.m3u8
+#EXTINF:0,Duronto TV
+#EXTVLCOPT:network-caching=1000
+http://172.31.235.10:8080/hls/31-duronto/index.m3u8
+#EXTINF:0,Ananda TV
+#EXTVLCOPT:network-caching=1000
+https://tvsen6.aynaott.com/anandatv/index.m3u8
+#EXTINF:0,MY TV
+#EXTVLCOPT:network-caching=1000
+http://172.31.235.10:8080/hls/13-mytv/index.m3u8
+#EXTINF:0,R tv
+#EXTVLCOPT:network-caching=1000
+http://172.31.235.10:8080/hls/9-rtv/index.m3u8
+#EXTINF:0,Ekushey ETV
+#EXTVLCOPT:network-caching=1000
+http://172.31.235.10:8080/hls/7-ekushy/index.m3u8
+#EXTINF:0,Boishakhi TV
+#EXTVLCOPT:network-caching=1000
+https://tvsen6.aynaott.com/boishakhitv/index.m3u8
+#EXTINF:0,Nexus TV
+#EXTVLCOPT:network-caching=1000
+https://tvsen6.aynaott.com/nexustv/index.m3u8
+#EXTINF:0,Channel S
+#EXTVLCOPT:network-caching=1000
+http://172.31.235.10:8080/hls/38-channel-s/index.m3u8
+#EXTINF:0,global TV
+#EXTVLCOPT:network-caching=1000
+https://tvsen6.aynaott.com/globaltvhd/index.m3u8
+#EXTINF:0,Ekhon TV
+#EXTVLCOPT:network-caching=1000
+http://172.31.235.10:8080/hls/37-ekhon/index.m3u8
+#EXTINF:0,Bijoy TV
+#EXTVLCOPT:network-caching=1000
+https://tvsen6.aynaott.com/bijoytv/index.m3u8
+#EXTINF:0,Desh TV
+#EXTVLCOPT:network-caching=1000
+https://tvsen6.aynaott.com/deshtv/index.m3u8
+#EXTINF:0,Jago News 24
+#EXTVLCOPT:network-caching=1000
+https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8
+#EXTINF:0,Movie Bangla
+#EXTVLCOPT:network-caching=1000
+http://alvetv.com/moviebanglatv/8080/index.m3u8
+#EXTINF:0,Sangeet Bangla
+#EXTVLCOPT:network-caching=1000
+http://172.31.235.10:8080/hls/60-sangeetbangla/index.m3u8
+#EXTINF:0,Asian TV
+#EXTVLCOPT:network-caching=1000
+https://tvsen6.aynaott.com/asiantv/index.m3u8
+#EXTINF:0,Bangla TV
+#EXTVLCOPT:network-caching=1000
+https://tvsen6.aynaott.com/banglatv/index.m3u8
+#EXTINF:0,Mohona TV
+#EXTVLCOPT:network-caching=1000
+https://tvsen6.aynaott.com/mohonatv/index.m3u8
+#EXTINF:0,T Sports HD
+#EXTVLCOPT:network-caching=1000
+https://tvsen7.aynaott.com/tsports-hd/index.m3u8
+#EXTINF:0,PTV Sports
+#EXTVLCOPT:network-caching=1000
+https://tvsen5.aynaott.com/PtvSports/index.m3u8
+#EXTINF:0,Khushboo
+#EXTVLCOPT:network-caching=1000
+https://cdn-4.pishow.tv/live/1473/master.m3u8
+#EXTINF:0,9X Tashan
+#EXTVLCOPT:network-caching=1000
+https://tvsen6.aynaott.com/9X_Tashan/index.m3u8
+#EXTINF:0,Music India
+#EXTVLCOPT:network-caching=1000
+https://cdn-2.pishow.tv/live/226/master.m3u8
+#EXTINF:0,Shemaroo TV
+#EXTVLCOPT:network-caching=1000
+https://cdn-3.pishow.tv/live/230/master.m3u8
+#EXTINF:0,Goldmines Bollywood
+#EXTVLCOPT:network-caching=1000
+https://tvsen6.aynaott.com/GoldminesBollywood/index.m3u8
+#EXTINF:0,Nat Geo TV
+#EXTVLCOPT:network-caching=1000
+https://tvsen6.aynaott.com/natgeo/index.m3u8
+#EXTINF:0,Disney JR
+#EXTVLCOPT:network-caching=1000
+https://tvsen7.aynaott.com/disneyjr/index.m3u8
+#EXTINF:0,Nicktoons
+#EXTVLCOPT:network-caching=1000
+https://tvsen5.aynaott.com/nicktoons/index.m3u8
+#EXTINF:0,Nickjr
+#EXTVLCOPT:network-caching=1000
+https://tvsen5.aynaott.com/nickjr/index.m3u8
+#EXTINF:0,Thikana
+#EXTVLCOPT:network-caching=1000
+https://5dd3981940faa.streamlock.net/thikanatv/thikanatv/playlist.m3u8
+#EXTINF:0,EUROSPORT HD
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge3/euro_sports_hd/index.m3u8
+#EXTINF:0,SONY MAX
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge3/sony_max/index.m3u8
+#EXTINF:0,SONY MAX HD
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge3/sony_max_hd/index.m3u8
+#EXTINF:0,SONY MAX 2
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge3/sonymax_2/index.m3u8
+#EXTINF:0,SONY PIX HD
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge3/sonypix_hd/index.m3u8
+#EXTINF:0,B4U MOVIES APAC
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge3/b4u_movies/index.m3u8
+#EXTINF:0,ZEE CINEMA HD
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge3/zee_cinema_hd/index.m3u8
+#EXTINF:0,& PICTURES HD
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge3/andpicture_hd/index.m3u8
+#EXTINF:0,TOFFEE MOVIES
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge3/toffee_movie/index.m3u8
+#EXTINF:0,GOLDMINES BOLLYWOOD
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge5/goldmines-bollywood/index.m3u8
+#EXTINF:0,9X TASHAN
+#EXTVLCOPT:network-caching=1000
+https://edge2.roarzone.net:8447/roarzone/edge5/9x-tashan/index.m3u8
+#EXTINF:0,Axn
+#EXTVLCOPT:network-caching=1000
+http://172.31.235.10:8080/hls/54-axn/index.m3u8
+#EXTINF:0,ZEE CINEMA
+#EXTVLCOPT:network-caching=1000
+http://103.99.249.139/zeecinema/index.m3u8
+#EXTINF:0,Zee Action
+#EXTVLCOPT:network-caching=1000
+http://103.175.73.12:8080/live/270/270_0.m3u8
+#EXTINF:0,Star Gold
+#EXTVLCOPT:network-caching=1000
+http://103.99.249.139/stargold/tracks-v1a1/mono.m3u8
+#EXTINF:0,095. GOLDMINES
+#EXTVLCOPT:network-caching=1000
+http://103.175.73.12:8080/live/53/master.m3u8
+#EXTINF:0,096. Goldmines Movies
+#EXTVLCOPT:network-caching=1000
+http://103.175.73.12:8080/live/51/master.m3u8
+#EXTINF:0,103. HBO 2
+#EXTVLCOPT:network-caching=1000
+http://23.88.66.93/HBO_2/index.m3u8
+#EXTINF:0,064. STAR GOLD HD
+#EXTVLCOPT:network-caching=1000
+http://198.195.239.50:8095/StarGold/index.m3u8
