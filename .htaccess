@@ -1,0 +1,4 @@
+Options -Indexes
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^https://livetv\.sysnolodge\.com\.au [NC]
+RewriteRule \.m3u8?$ - [F,L]

@@ -64,7 +64,7 @@ export default function UploadFileCompo({setEnableUploadFile, getFiles}){
     };   
     return(
         <>
-          <Card className="w-[400px]">
+          <Card className="max-w-md">
             {
                 (secretKey && secretKey==='sysboss') ?
                 <div>

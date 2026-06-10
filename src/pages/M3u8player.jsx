@@ -61,8 +61,8 @@ export default function M3UPlayer() {
        const data = await res.json();
        if(data.success){
         setPlaylists(data.playlists);
-        setActivePlaylist(data.playlists[0]);
-        loadPlaylist(data.playlists[0]);
+        // setActivePlaylist(data.playlists[0]);
+        // loadPlaylist(data.playlists[0]);
        }
     }  
 
@@ -97,7 +97,7 @@ export default function M3UPlayer() {
         setStatus('');
         setLoading(true);
         try {
-            const res=await fetch(playlist.file);
+            const res=await fetch(`https://livetv.sysnolodge.com.au/get_playlist.php?file=${playlist.file}`);
             const data= await res.text();
             setChannels(parseM3U(data));
         } catch (error) {
@@ -148,18 +148,19 @@ export default function M3UPlayer() {
                 <div className="flex overflow-auto gap-2">
                     {
                         activePlaylist &&
-                        <select
-                            value={activePlaylist.file}
+                        <select value={activePlaylist.file}
                             onChange={(e) => {
                                 const pl = playlists.find(p => p.file === e.target.value);
                                 if (pl) loadPlaylist(pl);
                             }}
                             className="border border-gray-300 rounded-lg px-2 py-1.5 text-sm outline-none focus:border-green-500"
                         >
+                            <option>
+                                Select Playlist
+                            </option>                            
                             {playlists.map((pl, i) => (
                                 <option key={i} value={pl.file}>
                                     {pl.label}
-                                    <span className="ml-2 text-xs opacity-70">({channels.length})</span>                              
                                 </option>
                             ))}
                         </select>                        
@@ -177,7 +178,7 @@ export default function M3UPlayer() {
                     <div className={`flex flex-col gap-2 ${showList ? 'w-64' : 'w-6' }`}>
                         <button onClick={() => setShowList(prev => !prev)}
                             className="p-1 bg-gray-900 rounded text-gray-200">
-                            ☰
+                            ☰ {showList && 'Hide Sidebar' }
                         </button>  
                         {
                             showList &&
@@ -193,7 +194,9 @@ export default function M3UPlayer() {
                                     onChange={e => setSearch(e.target.value)}
                                     className="w-full border border-gray-300 rounded-lg px-2 py-1.5 text-xs outline-none focus:border-green-500"
                                 />
+                                <p className="text-sm font-medium">Select Channels Below</p>
                                 <div className="h-[500px] overflow-y-auto border border-gray-200 rounded-lg">
+
                                     {loading &&
                                         <p className="text-xs text-gray-400 text-center p-4">loading...</p>
                                     }

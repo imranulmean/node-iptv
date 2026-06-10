@@ -1,7 +1,6 @@
 <?php
 
-header('Access-Control-Allow-Origin: * ' );
-header('Content-Type: application/json');
+require_once 'origins.php';
 
 $folder = __DIR__ . '/localFolder/IP_TV_08062026';
 $publicPath = '/localFolder/IP_TV_08062026/';
@@ -31,7 +30,8 @@ foreach (scandir($folder) as $file) {
 
     $playlists[] = [
         'label' => pathinfo($file, PATHINFO_FILENAME),
-        'file'  => $publicPath . rawurlencode($file)
+        // 'file'  => $publicPath . rawurlencode($file)
+        'file'  => rawurlencode($file)
     ];
 }
 

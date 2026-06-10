@@ -2,29 +2,31 @@
 
 // $allowedOrigins = [
 //     'https://livetv.sysnolodge.com.au'
-//     'http://localhost:5173'
-// ];
+//    'http://localhost:5173'
+// ]; 
 
 // if (isset($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowedOrigins, true)) {
 //     header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
 // }
 
-header('Access-Control-Allow-Origin: * ' );
-header('Access-Control-Allow-Methods: POST, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type');
-header('Content-Type: application/json');
+// // header('Access-Control-Allow-Origin: * ' );
+// header('Access-Control-Allow-Methods: POST, OPTIONS');
+// header('Access-Control-Allow-Headers: Content-Type');
+// header('Content-Type: application/json');
  
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-    http_response_code(204);
-    exit;
-}
+// if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+//     http_response_code(204);
+//     exit;
+// }
  
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405);
-    echo json_encode(['success' => false, 'message' => 'Method not allowed.']);
-    exit;
-}
+// if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+//     http_response_code(405);
+//     echo json_encode(['success' => false, 'message' => 'Method not allowed.']);
+//     exit;
+// }
  
+require_once 'origins.php';
+
 if (!isset($_FILES['files']) || $_FILES['files']['error'] !== UPLOAD_ERR_OK) {
     http_response_code(400);
     echo json_encode(['success' => false, 'message' => 'No file uploaded or upload error.']);
