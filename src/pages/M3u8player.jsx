@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Hls from "hls.js";
+import UploadFileCompo from "../components/UploadFileCompo";
 
 function parseM3U(text) {
     const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
@@ -18,16 +19,17 @@ function parseM3U(text) {
 }
 
 // ← add your m3u files here
-const playlists = [
-    { label: 'BDIX', file: '/localFolder/IP_TV_08062026/BDIX.m3u' },
-    { label: 'BD FIFA', file: '/localFolder/IP_TV_08062026/BD FIFA Channels.m3u' },
-    { label: 'BD IP TV', file: '/localFolder/IP_TV_08062026/BD IP TV.m3u' },
-    { label: '08062026', file: '/localFolder/IP_TV_08062026/08062026.m3u' },
-    { label: 'BDIX Cricfy', file: '/localFolder/IP_TV_08062026/BDIX Cricfy.m3u' },
-    { label: 'Fastest BD', file: '/localFolder/IP_TV_08062026/Fastest BD.m3u' },
-    { label: 'FIFA World Cup 2026 Auto Update', file: '/localFolder/IP_TV_08062026/FIFA World Cup 2026 Auto Update.m3u' },
-    { label: 'IP sports', file: '/localFolder/IP_TV_08062026/IP sports.m3u' }
-];
+// const playlists = [
+//     { label: 'BDIX', file: '/localFolder/IP_TV_08062026/BDIX.m3u' },
+//     { label: 'BD FIFA', file: '/localFolder/IP_TV_08062026/BD FIFA Channels.m3u' },
+//     { label: 'BD IP TV', file: '/localFolder/IP_TV_08062026/BD IP TV.m3u' },
+//     { label: '08062026', file: '/localFolder/IP_TV_08062026/08062026.m3u' },
+//     { label: 'BDIX Cricfy', file: '/localFolder/IP_TV_08062026/BDIX Cricfy.m3u' },
+//     { label: 'Fastest BD', file: '/localFolder/IP_TV_08062026/Fastest BD.m3u' },
+//     { label: 'FIFA World Cup 2026 Auto Update', file: '/localFolder/IP_TV_08062026/FIFA World Cup 2026 Auto Update.m3u' },
+//     { label: 'IP sports', file: '/localFolder/IP_TV_08062026/IP sports.m3u' },
+//     { label: 'RoarZoneTV', file: '/localFolder/IP_TV_08062026/RoarZoneTV.m3u' }
+// ];
 
 export default function M3UPlayer() {
     const videoRef = useRef(null);
@@ -36,39 +38,74 @@ export default function M3UPlayer() {
     const [active,          setActive]          = useState(null);
     const [search,          setSearch]          = useState('');
     const [status,          setStatus]          = useState('');
-    const [activePlaylist,  setActivePlaylist]  = useState(playlists[0]);
+    const [activePlaylist,  setActivePlaylist]  = useState([]);
     const [loading,         setLoading]         = useState(false);
+    const [playlists, setPlaylists] = useState([]);
 
     const [showList, setShowList] = useState(true);
-    
+    const [enableUploadFile, setEnableUploadFile] = useState(false);
+    const touchStartX = useRef(null);
+
+    useEffect(() => {
+        getFiles();
+      }, []);
+
+    useEffect(() => {
+        return () => {
+            if (hlsRef.current) hlsRef.current.destroy();
+        };
+    }, []);
+
+    const getFiles= async()=>{
+       const res= await fetch('https://livetv.sysnolodge.com.au/playlists.php')
+       const data = await res.json();
+       if(data.success){
+        setPlaylists(data.playlists);
+        setActivePlaylist(data.playlists[0]);
+        loadPlaylist(data.playlists[0]);
+       }
+    }  
+
     const filtered = channels.filter(c =>
         c.name.toLowerCase().includes(search.toLowerCase())
     );
 
-    const loadPlaylist = (playlist) => {
+    const handleTouchStart = (e) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+    
+    const handleTouchEnd = (e) => {
+        if (touchStartX.current === null) return;
+        const diff = touchStartX.current - e.changedTouches[0].clientX;
+        const idx = filtered.findIndex(c => c.url === active?.url);
+    
+        if (diff > 50) {
+            // swipe left → next
+            if (idx < filtered.length - 1) play(filtered[idx + 1]);
+        } else if (diff < -50) {
+            // swipe right → prev
+            if (idx > 0) play(filtered[idx - 1]);
+        }
+        touchStartX.current = null;
+    };
+
+    const loadPlaylist = async (playlist) => {
         setActivePlaylist(playlist);
         setChannels([]);
         setActive(null);
         setSearch('');
         setStatus('');
         setLoading(true);
-
-        fetch(playlist.file)
-            .then(res => res.text())
-            .then(text => {
-                setChannels(parseM3U(text));
-                setLoading(false);
-            })
-            .catch(err => {
-                console.error('Failed to load:', err);
-                setLoading(false);
-            });
+        try {
+            const res=await fetch(playlist.file);
+            const data= await res.text();
+            setChannels(parseM3U(data));
+        } catch (error) {
+            alert(error)
+        }finally{
+            setLoading(false);
+        }
     };
-
-    // load first playlist on mount
-    useEffect(() => {
-        loadPlaylist(playlists[0]);
-    }, []);
 
     const play = (ch) => {
         setActive(ch);
@@ -103,48 +140,52 @@ export default function M3UPlayer() {
         }
     };
 
-    useEffect(() => {
-        return () => {
-            if (hlsRef.current) hlsRef.current.destroy();
-        };
-    }, []);
-
     return (
         <>
             <div className="flex flex-col gap-3 p-4">
 
                 {/* playlist buttons */}
-                <div className="flex flex-wrap gap-2">
-                    {playlists.map((pl, i) => (
-                        <button key={i} onClick={() => loadPlaylist(pl)}
-                            className={`px-4 py-1.5 rounded-lg text-sm border transition-colors
-                                ${activePlaylist.file === pl.file
-                                    ? 'bg-gray-900 text-white border-gray-900'
-                                    : 'border-gray-300 text-gray-600 hover:bg-gray-50'
-                                }`}>
-                            {pl.label}
-                            {activePlaylist.file === pl.file &&
-                                <span className="ml-2 text-xs opacity-70">({channels.length})</span>
-                            }
-                        </button>
-                    ))}
+                <div className="flex overflow-auto gap-2">
+                    {
+                        activePlaylist &&
+                        <select
+                            value={activePlaylist.file}
+                            onChange={(e) => {
+                                const pl = playlists.find(p => p.file === e.target.value);
+                                if (pl) loadPlaylist(pl);
+                            }}
+                            className="border border-gray-300 rounded-lg px-2 py-1.5 text-sm outline-none focus:border-green-500"
+                        >
+                            {playlists.map((pl, i) => (
+                                <option key={i} value={pl.file}>
+                                    {pl.label}
+                                    <span className="ml-2 text-xs opacity-70">({channels.length})</span>                              
+                                </option>
+                            ))}
+                        </select>                        
+                    }
+                    <button className="bg-gray-900 text-gray-200 text-sm p-1 rounded-lg"
+                        onClick={()=>setEnableUploadFile((prev)=>!prev)}>Upload File</button>
                 </div>
-
+                 {
+                    enableUploadFile &&
+                    <UploadFileCompo setEnableUploadFile={setEnableUploadFile} getFiles={getFiles}/>
+                 }
                 <div className="flex gap-3">
 
                     {/* channel list */}                    
-                    <div className={`flex flex-col gap-2 ${showList ? 'w-64' : 'w-2' }`}>
-                        <div className="flex items-center justify-between">
-                           <button onClick={() => setShowList(prev => !prev)}
-                                className="p-1 rounded hover:bg-gray-100 text-gray-500">
-                                ☰
-                            </button>                             
-                            <p className="text-sm font-medium">{activePlaylist.label}</p>
-                            <span className="text-xs text-gray-400">{filtered.length} ch</span>                          
-                        </div>
+                    <div className={`flex flex-col gap-2 ${showList ? 'w-64' : 'w-6' }`}>
+                        <button onClick={() => setShowList(prev => !prev)}
+                            className="p-1 bg-gray-900 rounded text-gray-200">
+                            ☰
+                        </button>  
                         {
                             showList &&
                             <>
+                                <div className="flex items-center justify-between">                            
+                                    <p className="text-sm font-medium">{activePlaylist.label}</p>
+                                    <span className="text-xs text-gray-400">{filtered.length} ch</span>                          
+                                </div>                            
                                 <input
                                     type="text"
                                     placeholder="search..."
@@ -178,7 +219,10 @@ export default function M3UPlayer() {
 
                     {/* player */}
                     <div className="flex-1 flex flex-col gap-2">
-                        <div className="bg-black rounded-lg overflow-hidden relative">
+                        <div className="bg-black rounded-lg relative"
+                            onTouchStart={handleTouchStart}
+                            onTouchEnd={handleTouchEnd}                                
+                        >
                             <video ref={videoRef} controls className="w-full h-[70vh]"/>
                             {/* prev */}
                             <button
@@ -204,9 +248,9 @@ export default function M3UPlayer() {
                         </div>
 
                         <div className="bg-white border border-gray-200 rounded-lg p-3">
-                            <div className="flex items-center justify-between">
+                            <div className="flex flex-col">
                                 <p className="text-sm font-medium truncate">
-                                    {active ? active.name : 'Select a channel'}
+                                    {active ? active.name : 'Select'}
                                 </p>
                                 {status === 'live' &&
                                     <span className="text-xs bg-red-50 text-red-600 px-2 py-0.5 rounded-full shrink-0">● live</span>
