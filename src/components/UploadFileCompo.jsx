@@ -86,7 +86,7 @@ export default function UploadFileCompo({setEnableUploadFile, getFiles}){
                         <Button color='light' onClick={()=>serverUpload()} disabled={loading}>Upload File</Button>
                         <Button color='light' onClick={()=>setEnableUploadFile(false)} disabled={loading}>Close</Button>
                     </div> 
-                </div> : <input type='text' onChange={(e)=>setSecretKey(e.target.value)} placeholder="Enter Secret"/>                
+                </div> : <input type='password' onChange={(e)=>setSecretKey(e.target.value)} placeholder="Enter Secret"/>                
             }
 
           </Card >

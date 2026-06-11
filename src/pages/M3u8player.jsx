@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Hls from "hls.js";
 import UploadFileCompo from "../components/UploadFileCompo";
+import HeaderPublic from "../components/HeaderPublic";
 
 function parseM3U(text) {
     const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
@@ -61,8 +62,8 @@ export default function M3UPlayer() {
        const data = await res.json();
        if(data.success){
         setPlaylists(data.playlists);
-        // setActivePlaylist(data.playlists[0]);
-        // loadPlaylist(data.playlists[0]);
+        setActivePlaylist(data.playlists[0]);
+        loadPlaylist(data.playlists[0]);
        }
     }  
 
@@ -142,50 +143,53 @@ export default function M3UPlayer() {
 
     return (
         <>
+            <HeaderPublic/>
             <div className="flex flex-col gap-3 p-4">
 
                 {/* playlist buttons */}
-                <div className="flex overflow-auto gap-2">
+                <div className="flex flex-wrap gap-2 items-center">
                     {
                         activePlaylist &&
-                        <select value={activePlaylist.file}
-                            onChange={(e) => {
-                                const pl = playlists.find(p => p.file === e.target.value);
-                                if (pl) loadPlaylist(pl);
-                            }}
-                            className="border border-gray-300 rounded-lg px-2 py-1.5 text-sm outline-none focus:border-green-500"
-                        >
-                            <option>
-                                Select Playlist
-                            </option>                            
-                            {playlists.map((pl, i) => (
-                                <option key={i} value={pl.file}>
-                                    {pl.label}
-                                </option>
-                            ))}
-                        </select>                        
+                        <div className="flex flex-col">
+                            <span className="text-sm font-semibold">Select Playlist:</span>
+                            <select value={activePlaylist.file}
+                                onChange={(e) => {
+                                    const pl = playlists.find(p => p.file === e.target.value);
+                                    if (pl) loadPlaylist(pl);
+                                }}
+                                className="border border-gray-300 rounded-lg px-2 py-1.5 text-sm outline-none focus:border-green-500"
+                            >                           
+                                {playlists.map((pl, i) => (
+                                    <option key={i} value={pl.file}>
+                                        {pl.label}
+                                    </option>
+                                ))}
+                            </select> 
+                        </div>
+                       
                     }
-                    <button className="bg-gray-900 text-gray-200 text-sm p-1 rounded-lg"
-                        onClick={()=>setEnableUploadFile((prev)=>!prev)}>Upload File</button>
+                    
+                    <button className="bg-yellow-600 text-gray-200 text-sm p-2 rounded-lg"
+                        onClick={()=>setEnableUploadFile((prev)=>!prev)}>Upload File
+                    </button>
+                    <button onClick={() => setShowList(prev => !prev)}
+                        className="bg-green-900 text-gray-200 text-sm p-2 rounded-lg">
+                        ☰ {showList ? 'Hide Sidebar' : 'Show Sidebar' }
+                    </button>                     
                 </div>
                  {
                     enableUploadFile &&
                     <UploadFileCompo setEnableUploadFile={setEnableUploadFile} getFiles={getFiles}/>
                  }
-                <div className="flex gap-3">
+                <div className={`flex  ${ showList && 'gap-3' }`}>
 
                     {/* channel list */}                    
-                    <div className={`flex flex-col gap-2 ${showList ? 'w-64' : 'w-6' }`}>
-                        <button onClick={() => setShowList(prev => !prev)}
-                            className="p-1 bg-gray-900 rounded text-gray-200">
-                            ☰ {showList && 'Hide Sidebar' }
-                        </button>  
+                    <div className={`flex flex-col gap-2 ${showList ? 'w-64' : 'w-0' }`}> 
                         {
                             showList &&
                             <>
-                                <div className="flex items-center justify-between">                            
-                                    <p className="text-sm font-medium">{activePlaylist.label}</p>
-                                    <span className="text-xs text-gray-400">{filtered.length} ch</span>                          
+                                <div className="flex items-center">                            
+                                    <p className="text-sm font-medium">{activePlaylist.label} ({filtered.length} ch) </p>
                                 </div>                            
                                 <input
                                     type="text"
