@@ -258,7 +258,7 @@ export default function M3UPlayer() {
 
                         <div className="bg-white border border-gray-200 rounded-lg p-3">
                             <div className="flex flex-col">
-                                <p className="text-sm font-medium truncate">
+                                <p className="flex flex-wrap text-sm font-medium">
                                     {active ? active.name : 'Select'}
                                 </p>
                                 {status === 'live' &&
