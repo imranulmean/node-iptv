@@ -58,7 +58,7 @@ export default function UploadFileCompo({setEnableUploadFile, getFiles}){
         if (fileInputRef.current) {
           fileInputRef.current.value = "";
         }
-        setEnableUploadFile(false);
+        // setEnableUploadFile(false);
         getFiles();
       }
     };   

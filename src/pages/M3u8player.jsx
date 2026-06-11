@@ -144,13 +144,23 @@ export default function M3UPlayer() {
     return (
         <>
             <HeaderPublic/>
-            <div className="flex flex-col gap-3 p-4">
+            <div className="flex flex-col gap-3 p-4 ">
 
                 {/* playlist buttons */}
-                <div className="flex flex-wrap gap-2 items-center">
+                <div className="flex flex-col gap-2">
+
+                    <div className="flex gap-2">
+                        <button className="bg-yellow-600 text-gray-200 text-sm p-2 rounded-lg"
+                            onClick={()=>setEnableUploadFile((prev)=>!prev)}>Upload File
+                        </button>
+                        <button onClick={() => setShowList(prev => !prev)}
+                            className="bg-green-900 text-gray-200 text-sm p-2 rounded-lg">
+                            ☰ {showList ? 'Hide Sidebar' : 'Show Sidebar' }
+                        </button> 
+                    </div>                    
                     {
                         activePlaylist &&
-                        <div className="flex flex-col">
+                        <div className="flex flex-col max-w-md">
                             <span className="text-sm font-semibold">Select Playlist:</span>
                             <select value={activePlaylist.file}
                                 onChange={(e) => {
@@ -167,15 +177,7 @@ export default function M3UPlayer() {
                             </select> 
                         </div>
                        
-                    }
-                    
-                    <button className="bg-yellow-600 text-gray-200 text-sm p-2 rounded-lg"
-                        onClick={()=>setEnableUploadFile((prev)=>!prev)}>Upload File
-                    </button>
-                    <button onClick={() => setShowList(prev => !prev)}
-                        className="bg-green-900 text-gray-200 text-sm p-2 rounded-lg">
-                        ☰ {showList ? 'Hide Sidebar' : 'Show Sidebar' }
-                    </button>                     
+                    }                    
                 </div>
                  {
                     enableUploadFile &&

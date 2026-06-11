@@ -7,7 +7,7 @@ export default function HeaderPublic(){
     const location = useLocation();
       
     return (
-        <nav class="relative bg-green-900 sticky top-0 z-10 print:hidden">
+        <nav class="relative bg-green-900">
             <div class="w-full px-2 sm:px-6 lg:px-8">
                 <div class="relative flex h-16 items-center justify-between">
                     <div class="flex flex-1 items-center justify-between sm:items-stretch">
