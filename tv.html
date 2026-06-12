@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/liveTv.jpg" />
+  <title>Node Live TV</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.4.12/hls.min.js"></script>
+</head>
+<body class="bg-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark" style="background-color:#14532d;">
+    <div class="container-fluid px-3">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+        <img src="/liveTv.jpg" alt="Live TV" width="32" height="32" class="rounded-circle" />
+        <span class="fw-semibold fs-5">Live TV</span>
+      </a>
+      <a href="https://livetv.sysnolodge.com.au/fifa2026.html" target="_blank"
+        class="text-white text-decoration-none small px-2 py-1 rounded opacity-75">
+        Fifa 2026 Schedule
+      </a>
+    </div>
+  </nav>
+
+  <!-- Controls -->
+  <div class="container-fluid p-3 d-flex flex-column gap-2">
+    <div class="d-flex gap-2 flex-wrap">
+      <button onclick="toggleSidebar()" class="btn btn-sm btn-success">
+        ☰ <span id="sidebarLabel">Hide Sidebar</span>
+      </button>
+    </div>
+    <div style="max-width:400px;">
+      <label class="form-label fw-semibold small mb-1">Select Playlist:</label>
+      <select id="playlistSelect" onchange="onPlaylistChange(this)" class="form-select form-select-sm">
+        <option>Loading...</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="container-fluid px-3 pb-3">
+    <div class="row g-3" id="mainBody">
+
+      <!-- Sidebar -->
+      <div class="col-auto" id="sidebarCol" style="width:220px;">
+        <div class="d-flex flex-column gap-2">
+          <p class="small fw-semibold mb-0" id="sidebarTitle">— (0 ch)</p>
+          <input type="text" id="searchInput" oninput="onSearch()"
+            placeholder="search..." class="form-control form-control-sm" />
+          <p class="small fw-semibold mb-0">Select Channels Below</p>
+          <div class="border rounded" style="height:500px; overflow-y:scroll;" id="channelList">
+            <p class="text-muted text-center small p-3">No channels loaded</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Player -->
+      <div class="col">
+        <div class="d-flex flex-column gap-2">
+          <span id="statusBadge" class="badge d-none"></span>
+          <!-- Video box -->
+          <div class="bg-black rounded position-relative" id="videoBox">
+            <video id="video" controls class="w-100 rounded" style="height:70vh;"></video>
+            <button onclick="prevChannel()"
+              class="btn btn-dark btn-sm opacity-75 position-absolute top-50 start-0 translate-middle-y rounded-circle ms-2 d-flex align-items-center justify-content-center"
+              style="width:36px;height:36px;font-size:20px;">
+              ‹
+            </button>
+            <button onclick="nextChannel()"
+              class="btn btn-dark btn-sm opacity-75 position-absolute top-50 end-0 translate-middle-y rounded-circle me-2 d-flex align-items-center justify-content-center"
+              style="width:36px;height:36px;font-size:20px;">
+              ›
+            </button>
+          </div>
+
+          <!-- Now playing -->
+          <div class="bg-white border rounded p-3">
+            <p class="small fw-semibold mb-1" id="nowName">Select a channel</p>          
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<script>
+  var BASE = 'https://livetv.sysnolodge.com.au';
+  var hls = null;
+  var allChannels = [];
+  var filtered = [];
+  var activeChannel = null;
+  var playlists = [];
+  var activePlaylist = null;
+  var sidebarVisible = true;
+  var touchStartX = null;
+
+  document.getElementById('videoBox').addEventListener('touchstart', function(e) {
+    touchStartX = e.touches[0].clientX;
+  });
+  document.getElementById('videoBox').addEventListener('touchend', function(e) {
+    if (touchStartX === null) return;
+    var diff = touchStartX - e.changedTouches[0].clientX;
+    var idx = getActiveIdx();
+    if (diff > 50 && idx < filtered.length - 1) play(filtered[idx + 1]);
+    else if (diff < -50 && idx > 0) play(filtered[idx - 1]);
+    touchStartX = null;
+  });
+
+  getFiles();
+
+  function getFiles() {
+    fetch(BASE + '/playlists.php')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (!data.success || !data.playlists.length) return;
+        playlists = data.playlists;
+        var sel = document.getElementById('playlistSelect');
+        sel.innerHTML = '';
+        playlists.forEach(function(pl) {
+          var opt = document.createElement('option');
+          opt.value = pl.file;
+          opt.textContent = pl.label;
+          sel.appendChild(opt);
+        });
+        activePlaylist = playlists[0];
+        loadPlaylist(playlists[0]);
+      })
+      .catch(function(e) { alert('Failed to load playlists: ' + e); });
+  }
+
+  function onPlaylistChange(sel) {
+    var pl = playlists.find(function(p) { return p.file === sel.value; });
+    if (pl) loadPlaylist(pl);
+  }
+
+  function loadPlaylist(playlist) {
+    activePlaylist = playlist;
+    allChannels = []; filtered = []; activeChannel = null;
+    document.getElementById('searchInput').value = '';
+    document.getElementById('sidebarTitle').textContent = 'loading...';
+    document.getElementById('channelList').innerHTML = '<p class="text-muted text-center small p-3">loading...</p>';
+
+    fetch(BASE + '/get_playlist.php?file=' + playlist.file)
+      .then(function(r) { return r.text(); })
+      .then(function(text) {
+        allChannels = parseM3U(text);
+        filtered = allChannels.slice();
+        renderChannels();
+        document.getElementById('sidebarTitle').textContent =
+          (activePlaylist ? activePlaylist.label : '') + ' (' + filtered.length + ' ch)';
+      })
+      .catch(function(e) { alert('Failed to load playlist: ' + e); });
+  }
+
+  function parseM3U(text) {
+    var lines = text.split('\n').map(function(l) { return l.trim(); }).filter(Boolean);
+    var list = [];
+    for (var i = 0; i < lines.length; i++) {
+      if (lines[i].indexOf('#EXTINF') === 0) {
+        var name = lines[i].replace(/#EXTINF:[^,]*,/, '').trim();
+        var url = '';
+        for (var j = i ; j < lines.length; j++) {
+          if (lines[j].charAt(0) !== '#') { url = lines[j]; i = j; break; }
+        }
+        if (url) list.push({ name: name, url: url });
+      }
+    }
+    return list;
+  }
+
+  function renderChannels() {
+    var list = document.getElementById('channelList');
+    if (filtered.length === 0) {
+      list.innerHTML = '<p class="text-muted text-center small p-3">no channels found</p>';
+      return;
+    }
+    var html = '';
+    filtered.forEach(function(ch, i) {
+      var isActive = activeChannel && ch.url === activeChannel.url;
+      html += '<div onclick="playIdx(' + i + ')" class="d-flex align-items-center gap-2 px-3 py-2 border-bottom small cursor-pointer '
+        + (isActive ? 'bg-primary-subtle text-primary fw-semibold' : 'text-secondary') + '" role="button">'
+        + '<span class="text-muted" style="min-width:20px;">' + (i + 1) + '</span>'
+        + '<span class="text-truncate">' + escHtml(ch.name) + '</span>'
+        + '</div>';
+    });
+    list.innerHTML = html;
+  }
+
+  function escHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  function onSearch() {
+    var q = document.getElementById('searchInput').value.toLowerCase();
+    filtered = allChannels.filter(function(c) { return c.name.toLowerCase().indexOf(q) !== -1; });
+    renderChannels();
+    document.getElementById('sidebarTitle').textContent =
+      (activePlaylist ? activePlaylist.label : '') + ' (' + filtered.length + ' ch)';
+  }
+
+  function playIdx(i) { play(filtered[i]); }
+
+  function play(ch) {
+    activeChannel = ch;
+    setStatus('loading');
+    document.getElementById('nowName').textContent = ch.name;
+    renderChannels();
+    var video = document.getElementById('video');
+    if (hls) { hls.destroy(); hls = null; }
+    if (Hls.isSupported()) {
+      hls = new Hls({ enableWorker: false });
+      hls.loadSource(ch.url);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, function() { video.play().catch(function(){}); setStatus('live'); });
+      hls.on(Hls.Events.ERROR, function(e, d) { if (d.fatal) setStatus('error'); });
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = ch.url; video.play().catch(function(){}); setStatus('live');
+    } else {
+      video.src = ch.url; video.play().catch(function(){}); setStatus('live');
+    }
+  }
+
+  function getActiveIdx() {
+    return filtered.findIndex(function(c) { return activeChannel && c.url === activeChannel.url; });
+  }
+
+  function prevChannel() { var i = getActiveIdx(); if (i > 0) play(filtered[i - 1]); }
+  function nextChannel() { var i = getActiveIdx(); if (i < filtered.length - 1) play(filtered[i + 1]); }
+
+  function setStatus(s) {
+    var badge = document.getElementById('statusBadge');
+    badge.className = 'badge';
+    if (s === 'live') { badge.className += ' text-bg-danger'; badge.textContent = '● live'; badge.classList.remove('d-none'); }
+    else if (s === 'loading') { badge.className += ' text-bg-warning'; badge.textContent = 'loading'; badge.classList.remove('d-none'); }
+    else if (s === 'error') { badge.className += ' text-bg-secondary'; badge.textContent = 'error'; badge.classList.remove('d-none'); }
+    else { badge.classList.add('d-none'); }
+  }
+
+  function toggleSidebar() {
+    sidebarVisible = !sidebarVisible;
+    document.getElementById('sidebarCol').style.display = sidebarVisible ? 'block' : 'none';
+    document.getElementById('sidebarLabel').textContent = sidebarVisible ? 'Hide Sidebar' : 'Show Sidebar';
+  }
+</script>
+</body>
+</html>

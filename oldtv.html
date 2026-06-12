@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Node Live TV</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.4.12/hls.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: sans-serif; background: #f9fafb; color: #111; }
+    header { background: #111; color: #fff; padding: 10px 16px; font-size: 16px; font-weight: bold; }
+
+    .top-bar { display: flex; flex-direction: column; gap: 8px; padding: 12px 16px; }
+    .btn-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    button { cursor: pointer; border: none; border-radius: 8px; padding: 8px 14px; font-size: 13px; }
+    .btn-upload { background: #ca8a04; color: #fff; }
+    .btn-sidebar { background: #14532d; color: #fff; }
+    .btn-upload-submit { background: #1d4ed8; color: #fff; padding: 6px 14px; }
+
+    select { border: 1px solid #d1d5db; border-radius: 8px; padding: 6px 10px; font-size: 13px; outline: none; width: 100%; max-width: 400px; }
+
+    .upload-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px; max-width: 400px; display: flex; flex-direction: column; gap: 8px; }
+    .upload-card input[type=file] { font-size: 13px; }
+    .upload-card p { font-size: 12px; color: #6b7280; }
+    progress { width: 100%; height: 8px; border-radius: 4px; }
+
+    .main { display: flex; gap: 12px; padding: 0 16px 16px; }
+
+    .sidebar { width: 220px; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar.hidden { width: 0; overflow: hidden; }
+    .sidebar-title { font-size: 13px; font-weight: 600; }
+    .search-input { border: 1px solid #d1d5db; border-radius: 8px; padding: 6px 10px; font-size: 12px; outline: none; width: 100%; }
+    .channel-list { height: 500px; overflow-y: auto; border: 1px solid #e5e7eb; border-radius: 8px; }
+    .channel-item { display: flex; align-items: center; gap: 8px; padding: 8px 10px; font-size: 12px; cursor: pointer; border-bottom: 1px solid #f3f4f6; color: #374151; }
+    .channel-item:hover { background: #f9fafb; }
+    .channel-item.active { background: #eff6ff; color: #1d4ed8; font-weight: 600; }
+    .channel-num { color: #9ca3af; width: 20px; flex-shrink: 0; }
+    .channel-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .ch-empty { text-align: center; padding: 16px; font-size: 12px; color: #9ca3af; }
+
+    .player-wrap { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+    .video-box { background: #000; border-radius: 10px; position: relative; }
+    video { width: 100%; height: 70vh; display: block; border-radius: 10px; }
+    .nav-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 22px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+    .nav-btn:hover { background: rgba(0,0,0,0.8); }
+    .nav-prev { left: 8px; }
+    .nav-next { right: 8px; }
+
+    .now-playing { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px; }
+    .now-name { font-size: 14px; font-weight: 500; flex-wrap: wrap; }
+    .badge { display: inline-block; font-size: 11px; padding: 2px 10px; border-radius: 999px; margin-top: 4px; }
+    .badge-live { background: #fef2f2; color: #dc2626; }
+    .badge-loading { background: #fefce8; color: #ca8a04; }
+    .badge-error { background: #f3f4f6; color: #6b7280; }
+  </style>
+</head>
+<body>
+
+<header>📺 Node Live TV</header>
+
+<div class="top-bar">
+  <div class="btn-row">
+    <button class="btn-upload" onclick="toggleUpload()">Upload File</button>
+    <button class="btn-sidebar" onclick="toggleSidebar()">☰ <span id="sidebarLabel">Hide Sidebar</span></button>
+  </div>
+
+  <div id="uploadCard" class="upload-card" style="display:none;">
+    <input type="file" id="fileInput" accept=".m3u,.m3u8" onchange="onFileChange(this)" />
+    <p id="fileSizeText">Total Selected Size: 0 MB</p>
+    <progress id="uploadProgress" value="0" max="100" style="display:none;"></progress>
+    <div>
+      <button class="btn-upload-submit" onclick="uploadFile()">Upload File</button>
+    </div>
+  </div>
+
+  <div>
+    <span style="font-size:13px;font-weight:600;">Select Playlist:</span>
+    <select id="playlistSelect" onchange="onPlaylistChange(this)">
+      <option>Loading...</option>
+    </select>
+  </div>
+</div>
+
+<div class="main">
+  <!-- sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-title" id="sidebarTitle">— (0 ch)</div>
+    <input class="search-input" type="text" placeholder="search..." id="searchInput" oninput="onSearch()" />
+    <p style="font-size:13px;font-weight:500;">Select Channels Below</p>
+    <div class="channel-list" id="channelList">
+      <p class="ch-empty">No channels loaded</p>
+    </div>
+  </div>
+
+  <!-- player -->
+  <div class="player-wrap">
+    <div class="video-box" id="videoBox">
+      <video id="video" controls></video>
+      <button class="nav-btn nav-prev" onclick="prevChannel()">‹</button>
+      <button class="nav-btn nav-next" onclick="nextChannel()">›</button>
+    </div>
+    <div class="now-playing">
+      <div class="now-name" id="nowName">Select a channel</div>
+      <span class="badge" id="statusBadge" style="display:none;"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+  var BASE = 'https://livetv.sysnolodge.com.au';
+  var hls = null;
+  var allChannels = [];
+  var filtered = [];
+  var activeChannel = null;
+  var playlists = [];
+  var activePlaylist = null;
+  var sidebarVisible = true;
+
+  // touch swipe
+  var touchStartX = null;
+  document.getElementById('videoBox').addEventListener('touchstart', function(e) {
+    touchStartX = e.touches[0].clientX;
+  });
+  document.getElementById('videoBox').addEventListener('touchend', function(e) {
+    if (touchStartX === null) return;
+    var diff = touchStartX - e.changedTouches[0].clientX;
+    var idx = filtered.findIndex(function(c) { return activeChannel && c.url === activeChannel.url; });
+    if (diff > 50 && idx < filtered.length - 1) play(filtered[idx + 1]);
+    else if (diff < -50 && idx > 0) play(filtered[idx - 1]);
+    touchStartX = null;
+  });
+
+  // ── init ────────────────────────────────────────
+  getFiles();
+
+  function getFiles() {
+    fetch(BASE + '/playlists.php')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data.success && data.playlists.length) {
+          playlists = data.playlists;
+          var sel = document.getElementById('playlistSelect');
+          sel.innerHTML = '';
+          playlists.forEach(function(pl, i) {
+            var opt = document.createElement('option');
+            opt.value = pl.file;
+            opt.textContent = pl.label;
+            sel.appendChild(opt);
+          });
+          activePlaylist = playlists[0];
+          loadPlaylist(playlists[0]);
+        }
+      })
+      .catch(function(e) { alert('Failed to load playlists: ' + e); });
+  }
+
+  function onPlaylistChange(sel) {
+    var pl = playlists.find(function(p) { return p.file === sel.value; });
+    if (pl) loadPlaylist(pl);
+  }
+
+  function loadPlaylist(playlist) {
+    activePlaylist = playlist;
+    allChannels = [];
+    filtered = [];
+    activeChannel = null;
+    document.getElementById('searchInput').value = '';
+    document.getElementById('sidebarTitle').textContent = 'Loading...';
+    document.getElementById('channelList').innerHTML = '<p class="ch-empty">loading...</p>';
+
+    fetch(BASE + '/get_playlist.php?file=' + encodeURIComponent(playlist.file))
+      .then(function(r) { return r.text(); })
+      .then(function(text) {
+        allChannels = parseM3U(text);
+        filtered = allChannels.slice();
+        renderChannels();
+        document.getElementById('sidebarTitle').textContent =
+          (activePlaylist ? activePlaylist.label : '') + ' (' + filtered.length + ' ch)';
+      })
+      .catch(function(e) { alert('Failed to load playlist: ' + e); });
+  }
+
+  function parseM3U(text) {
+    var lines = text.split('\n').map(function(l) { return l.trim(); }).filter(Boolean);
+    var list = [];
+    for (var i = 0; i < lines.length; i++) {
+      if (lines[i].indexOf('#EXTINF') === 0) {
+        var name = lines[i].replace(/#EXTINF:[^,]*,/, '').trim();
+        var url = '';
+        for (var j = i + 1; j < lines.length; j++) {
+          if (lines[j].charAt(0) !== '#') { url = lines[j]; i = j; break; }
+        }
+        if (url) list.push({ name: name, url: url });
+      }
+    }
+    return list;
+  }
+
+  function renderChannels() {
+    var list = document.getElementById('channelList');
+    if (filtered.length === 0) {
+      list.innerHTML = '<p class="ch-empty">no channels found</p>';
+      return;
+    }
+    var html = '';
+    filtered.forEach(function(ch, i) {
+      var isActive = activeChannel && ch.url === activeChannel.url;
+      html += '<div class="channel-item' + (isActive ? ' active' : '') + '" onclick="play(filtered[' + i + '])">'
+        + '<span class="channel-num">' + (i + 1) + '</span>'
+        + '<span class="channel-name">' + escHtml(ch.name) + '</span>'
+        + '</div>';
+    });
+    list.innerHTML = html;
+  }
+
+  function escHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function onSearch() {
+    var q = document.getElementById('searchInput').value.toLowerCase();
+    filtered = allChannels.filter(function(c) { return c.name.toLowerCase().indexOf(q) !== -1; });
+    renderChannels();
+    document.getElementById('sidebarTitle').textContent =
+      (activePlaylist ? activePlaylist.label : '') + ' (' + filtered.length + ' ch)';
+  }
+
+  function play(ch) {
+    activeChannel = ch;
+    setStatus('loading');
+    document.getElementById('nowName').textContent = ch.name;
+    renderChannels();
+
+    var video = document.getElementById('video');
+    if (hls) { hls.destroy(); hls = null; }
+
+    if (Hls.isSupported()) {
+      hls = new Hls({ enableWorker: false });
+      hls.loadSource(ch.url);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, function() {
+        video.play().catch(function(){});
+        setStatus('live');
+      });
+      hls.on(Hls.Events.ERROR, function(e, d) {
+        if (d.fatal) setStatus('error');
+      });
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = ch.url;
+      video.play().catch(function(){});
+      setStatus('live');
+    } else {
+      video.src = ch.url;
+      video.play().catch(function(){});
+      setStatus('live');
+    }
+  }
+
+  function prevChannel() {
+    var idx = filtered.findIndex(function(c) { return activeChannel && c.url === activeChannel.url; });
+    if (idx > 0) play(filtered[idx - 1]);
+  }
+
+  function nextChannel() {
+    var idx = filtered.findIndex(function(c) { return activeChannel && c.url === activeChannel.url; });
+    if (idx < filtered.length - 1) play(filtered[idx + 1]);
+  }
+
+  function setStatus(s) {
+    var badge = document.getElementById('statusBadge');
+    badge.className = 'badge';
+    if (s === 'live') { badge.className += ' badge-live'; badge.textContent = '● live'; badge.style.display = 'inline-block'; }
+    else if (s === 'loading') { badge.className += ' badge-loading'; badge.textContent = 'loading'; badge.style.display = 'inline-block'; }
+    else if (s === 'error') { badge.className += ' badge-error'; badge.textContent = 'error'; badge.style.display = 'inline-block'; }
+    else { badge.style.display = 'none'; }
+  }
+
+  function toggleSidebar() {
+    sidebarVisible = !sidebarVisible;
+    document.getElementById('sidebar').className = 'sidebar' + (sidebarVisible ? '' : ' hidden');
+    document.getElementById('sidebarLabel').textContent = sidebarVisible ? 'Hide Sidebar' : 'Show Sidebar';
+  }
+
+  function toggleUpload() {
+    var card = document.getElementById('uploadCard');
+    card.style.display = card.style.display === 'none' ? 'block' : 'none';
+  }
+
+  // ── upload ───────────────────────────────────────
+  var selectedFile = null;
+
+  function onFileChange(input) {
+    selectedFile = input.files[0] || null;
+    var mb = selectedFile ? (selectedFile.size / (1024 * 1024)).toFixed(2) : 0;
+    document.getElementById('fileSizeText').textContent = 'Total Selected Size: ' + mb + ' MB';
+  }
+
+  function uploadFile() {
+
+  }
+</script>
+</body>
+</html>

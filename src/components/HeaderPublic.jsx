@@ -18,10 +18,10 @@ export default function HeaderPublic(){
                             </Link>
                             
                         </div>
-                        {/* <div class="sm:ml-6 sm:block">
+                        <div class="sm:ml-6 sm:block">
                             <div class="flex space-x-4">                               
-                                <Link to="/monitoring" class={`rounded-md px-3 py-2 text-sm font-medium ${location.pathname==='/monitoring'? 'text-white bg-white/5' : 'text-gray-300 hover:bg-white/5 hover:text-white'} `}>Monitoring</Link>
-                                <Dropdown arrowIcon={true} label="Uploaded Files"
+                                <Link to="https://livetv.sysnolodge.com.au/fifa2026.html" target="_blank" class={`rounded-md px-3 py-2 text-sm font-medium ${'text-white bg-white/5 text-gray-300 hover:bg-white/5 hover:text-white'} `}>Fifa 2026 Schedule</Link>
+                                {/* <Dropdown arrowIcon={true} label="Uploaded Files"
                                           class={`rounded-md text-sm font-medium ${location.pathname==='/backups'  ? 'text-white bg-white/5' : 'text-gray-300 hover:bg-white/5 hover:text-white'} `}
                                 >
                                     <Dropdown.Item as={Link} to="/localfiles">
@@ -30,9 +30,9 @@ export default function HeaderPublic(){
                                     <Dropdown.Item as={Link} to="/backups">
                                         Backups
                                     </Dropdown.Item>
-                                </Dropdown>
+                                </Dropdown> */}
                             </div>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </div>

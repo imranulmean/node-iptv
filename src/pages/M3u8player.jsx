@@ -10,7 +10,7 @@ function parseM3U(text) {
         if (lines[i].startsWith('#EXTINF')) {
             const name = lines[i].replace(/#EXTINF:[^,]*,/, '').trim();
             let url = '';
-            for (let j = i + 1; j < lines.length; j++) {
+            for (let j = i ; j < lines.length; j++) {
                 if (!lines[j].startsWith('#')) { url = lines[j]; i = j; break; }
             }
             if (url) list.push({ name, url });
@@ -18,19 +18,6 @@ function parseM3U(text) {
     }
     return list;
 }
-
-// ← add your m3u files here
-// const playlists = [
-//     { label: 'BDIX', file: '/localFolder/IP_TV_08062026/BDIX.m3u' },
-//     { label: 'BD FIFA', file: '/localFolder/IP_TV_08062026/BD FIFA Channels.m3u' },
-//     { label: 'BD IP TV', file: '/localFolder/IP_TV_08062026/BD IP TV.m3u' },
-//     { label: '08062026', file: '/localFolder/IP_TV_08062026/08062026.m3u' },
-//     { label: 'BDIX Cricfy', file: '/localFolder/IP_TV_08062026/BDIX Cricfy.m3u' },
-//     { label: 'Fastest BD', file: '/localFolder/IP_TV_08062026/Fastest BD.m3u' },
-//     { label: 'FIFA World Cup 2026 Auto Update', file: '/localFolder/IP_TV_08062026/FIFA World Cup 2026 Auto Update.m3u' },
-//     { label: 'IP sports', file: '/localFolder/IP_TV_08062026/IP sports.m3u' },
-//     { label: 'RoarZoneTV', file: '/localFolder/IP_TV_08062026/RoarZoneTV.m3u' }
-// ];
 
 export default function M3UPlayer() {
     const videoRef = useRef(null);
@@ -201,7 +188,7 @@ export default function M3UPlayer() {
                                     className="w-full border border-gray-300 rounded-lg px-2 py-1.5 text-xs outline-none focus:border-green-500"
                                 />
                                 <p className="text-sm font-medium">Select Channels Below</p>
-                                <div className="h-[500px] overflow-y-auto border border-gray-200 rounded-lg">
+                                <div className="h-[50vh] overflow-y-auto border border-gray-200 rounded-lg">
 
                                     {loading &&
                                         <p className="text-xs text-gray-400 text-center p-4">loading...</p>
@@ -228,11 +215,26 @@ export default function M3UPlayer() {
 
                     {/* player */}
                     <div className="flex-1 flex flex-col gap-2">
+                        <div className="flex flex-wrap items-center gap-2">
+                            <p className="flex flex-wrap text-xs font-medium">
+                                {active ? active.name : 'Select'}
+                            </p>                        
+                            {status === 'live' &&
+                                <span className="text-xs bg-red-50 text-red-600 px-2 py-0.5 rounded-full shrink-0">● live</span>
+                            }
+                            {status === 'loading' &&
+                                <span className="text-xs bg-yellow-50 text-yellow-600 px-2 py-0.5 rounded-full shrink-0">loading</span>
+                            }
+                            {status === 'error' &&
+                                <span className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full shrink-0">error</span>
+                            }   
+                        </div>
+                     
                         <div className="bg-black rounded-lg relative"
                             onTouchStart={handleTouchStart}
                             onTouchEnd={handleTouchEnd}                                
-                        >
-                            <video ref={videoRef} controls className="w-full h-[70vh]"/>
+                        >                            
+                            <video ref={videoRef} controls className="w-full h-[60vh]"/>
                             {/* prev */}
                             <button
                                 onClick={() => {
@@ -256,25 +258,11 @@ export default function M3UPlayer() {
                             </button>                            
                         </div>
 
-                        <div className="bg-white border border-gray-200 rounded-lg p-3">
-                            <div className="flex flex-col">
-                                <p className="flex flex-wrap text-sm font-medium">
-                                    {active ? active.name : 'Select'}
-                                </p>
-                                {status === 'live' &&
-                                    <span className="text-xs bg-red-50 text-red-600 px-2 py-0.5 rounded-full shrink-0">● live</span>
-                                }
-                                {status === 'loading' &&
-                                    <span className="text-xs bg-yellow-50 text-yellow-600 px-2 py-0.5 rounded-full shrink-0">loading</span>
-                                }
-                                {status === 'error' &&
-                                    <span className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full shrink-0">error</span>
-                                }
-                            </div>
-                            {/* {active &&
+                        {/* <div className="bg-white border border-gray-200 rounded-lg p-3">
+                            {active &&
                                 <p className="text-xs text-gray-400 mt-1 truncate">{active.url}</p>
-                            } */}
-                        </div>
+                            }
+                        </div> */}
                     </div>
 
                 </div>
