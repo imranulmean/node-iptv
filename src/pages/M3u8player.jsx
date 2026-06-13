@@ -33,6 +33,7 @@ export default function M3UPlayer() {
     const [activePlaylist,  setActivePlaylist]  = useState([]);
     const [loading,         setLoading]         = useState(false);
     const [playlists, setPlaylists] = useState([]);
+    const [selectedIndex, setSelectedIndex]= useState(-1);
 
     const [showList, setShowList] = useState(true);
     const [enableUploadFile, setEnableUploadFile] = useState(false);
@@ -99,8 +100,9 @@ export default function M3UPlayer() {
         }
     };
 
-    const play = (ch) => {
+    const play = (ch, index) => {
         setActive(ch);
+        setSelectedIndex(index)
         setStatus('loading');
         const video = videoRef.current;
 
@@ -199,9 +201,9 @@ export default function M3UPlayer() {
                                         <p className="text-xs text-gray-400 text-center p-4">loading...</p>
                                     }
                                     {!loading && filtered.map((ch, i) => (
-                                        <div key={i} onClick={() => play(ch)}
+                                        <div key={i} onClick={() => play(ch, i)}
                                             className={`px-3 py-2 text-xs cursor-pointer border-b border-gray-100 truncate flex items-center gap-2
-                                                ${active?.name === ch.name
+                                                ${selectedIndex === i
                                                     ? 'bg-blue-50 text-blue-700 font-medium'
                                                     : 'hover:bg-gray-50 text-gray-700'
                                                 }`}>

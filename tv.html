@@ -198,7 +198,7 @@
     var html = '';
     pageItems.forEach(function(ch, i) {
       var globalIdx = start + i;
-      var isActive = activeChannel && ch.name === activeChannel.name;
+      var isActive = activeChannel && ch.url === activeChannel.url;
       html += '<div onclick="playIdx(' + globalIdx + ')" role="button"'
         + ' class="d-flex align-items-center gap-2 px-3 py-2 border-bottom small '
         + (isActive ? 'bg-primary text-white fw-semibold' : 'text-secondary') + '">'
