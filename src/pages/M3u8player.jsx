@@ -242,6 +242,8 @@ export default function M3UPlayer() {
                             onTouchEnd={handleTouchEnd}                                
                         >                            
                             <video ref={videoRef} controls className="w-full h-[60vh]"/>
+                           
+
                             {/* prev */}
                             <button
                                 onClick={() => {

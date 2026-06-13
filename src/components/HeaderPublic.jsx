@@ -19,18 +19,23 @@ export default function HeaderPublic(){
                             
                         </div>
                         <div class="sm:ml-6 sm:block">
-                            <div class="flex space-x-4">                               
-                                <Link to="https://livetv.sysnolodge.com.au/fifa2026.html" target="_blank" class={`rounded-md px-3 py-2 text-sm font-medium ${'text-white bg-white/5 text-gray-300 hover:bg-white/5 hover:text-white'} `}>Fifa 2026 Schedule</Link>
-                                {/* <Dropdown arrowIcon={true} label="Uploaded Files"
-                                          class={`rounded-md text-sm font-medium ${location.pathname==='/backups'  ? 'text-white bg-white/5' : 'text-gray-300 hover:bg-white/5 hover:text-white'} `}
-                                >
-                                    <Dropdown.Item as={Link} to="/localfiles">
-                                        Local File Uploader
-                                    </Dropdown.Item>
-                                    <Dropdown.Item as={Link} to="/backups">
-                                        Backups
-                                    </Dropdown.Item>
-                                </Dropdown> */}
+                            <div class="flex space-x-4">
+                                    <Link to="https://livetv.sysnolodge.com.au/fifa2026.html" target="_blank" class={`rounded-md px-3 py-2 text-sm font-medium ${'text-white bg-white/5 text-gray-300 hover:bg-white/5 hover:text-white'} hidden md:block`}>Fifa 2026 Schedule</Link>
+                                    <Link to="/fifa2026" class={`rounded-md px-3 py-2 text-sm font-medium ${'text-white bg-white/5 text-gray-300 hover:bg-white/5 hover:text-white'} hidden sm:block`}>Fifa 2026 Live</Link>
+
+                                <div className="md:hidden">
+                                    <Dropdown arrowIcon={true} label="Watch Fifa 2026 Live"
+                                            class={`rounded-md text-sm font-medium text-white bg-white/5 text-gray-300 hover:bg-white/5 hover:text-white'} `}
+                                    >
+                                        <Dropdown.Item as={Link} to="https://livetv.sysnolodge.com.au/fifa2026.html" target="_blank">
+                                            Fifa 2026 Schedule
+                                        </Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/fifa2026">
+                                            Fifa 2026 Live
+                                        </Dropdown.Item>
+                                    </Dropdown>
+                                </div>
+
                             </div>
                         </div>
                     </div>
