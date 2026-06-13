@@ -155,7 +155,9 @@ export default function M3UPlayer() {
                     {
                         activePlaylist &&
                         <div className="flex flex-col max-w-md">
-                            <span className="text-sm font-semibold">Select Playlist:</span>
+                            <span className="text-sm font-semibold">
+                                Select Playlist:
+                            </span>
                             <select value={activePlaylist.file}
                                 onChange={(e) => {
                                     const pl = playlists.find(p => p.file === e.target.value);
@@ -168,14 +170,14 @@ export default function M3UPlayer() {
                                         {pl.label}
                                     </option>
                                 ))}
-                            </select> 
+                            </select>                                   
                         </div>
                        
                     }                    
                 </div>
                  {
                     enableUploadFile &&
-                    <UploadFileCompo setEnableUploadFile={setEnableUploadFile} getFiles={getFiles}/>
+                    <UploadFileCompo setEnableUploadFile={setEnableUploadFile} getFiles={getFiles} activePlaylist={activePlaylist}/>
                  }
                 <div className={`flex  ${ showList && 'gap-3' }`}>
 

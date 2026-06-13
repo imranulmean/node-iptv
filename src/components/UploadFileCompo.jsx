@@ -2,9 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { Card, Button } from "flowbite-react";
 import axios from "axios";
 
-export default function UploadFileCompo({setEnableUploadFile, getFiles}){
+export default function UploadFileCompo({setEnableUploadFile, getFiles, activePlaylist}){
 
     const BASE_API=import.meta.env.VITE_API_BASE_URL;
+    const SECRET_UPLOAD=import.meta.env.VITE_API_SECRET_UPLOAD;
+    const SECRET_DELETE=import.meta.env.VITE_API_SECRET_DELETE;
     const fileInputRef = useRef(null);
     const [files, setFiles]=useState([]);
     const [loading, setLoading]=useState(false);
@@ -12,18 +14,18 @@ export default function UploadFileCompo({setEnableUploadFile, getFiles}){
     const [totalFileSize, setTotalFileSize] = useState(0);
     const [secretKey, setSecretKey]= useState('');
 
-      const getTotalFileSize = (fileList) => {
-        if (!fileList || !fileList.length) {
-          setTotalFileSize(0);
-          return;
-        }      
-        const totalSizeBytes = Array.from(fileList).reduce(
-          (acc, file) => acc + file.size,
-          0
-        );      
-        const totalSizeMB = (totalSizeBytes / (1024 * 1024)).toFixed(2);
-        setTotalFileSize(totalSizeMB);
-      };    
+    const getTotalFileSize = (fileList) => {
+      if (!fileList || !fileList.length) {
+        setTotalFileSize(0);
+        return;
+      }      
+      const totalSizeBytes = Array.from(fileList).reduce(
+        (acc, file) => acc + file.size,
+        0
+      );      
+      const totalSizeMB = (totalSizeBytes / (1024 * 1024)).toFixed(2);
+      setTotalFileSize(totalSizeMB);
+    };    
 
     const serverUpload = async () => {
       if(files.length<1){
@@ -45,7 +47,7 @@ export default function UploadFileCompo({setEnableUploadFile, getFiles}){
               }
               }
           })
-         alert(res.data.message);
+        alert(res.data.message);
     
       } catch (err) {
         console.error(err);
@@ -62,11 +64,29 @@ export default function UploadFileCompo({setEnableUploadFile, getFiles}){
         getFiles();
       }
     };   
+
+    const deleteFile= async()=>{
+      console.log(activePlaylist)
+      try {
+        const res = await axios.get(`https://livetv.sysnolodge.com.au/delete_playlist.php?file=${activePlaylist.file}`)
+       alert(res.data.message);
+      } 
+      catch (err) {
+        console.error(err);
+        alert(err);
+      } 
+      finally {
+        setLoading(false);
+        // setEnableUploadFile(false);
+        getFiles();
+     }      
+    }
+
     return(
         <>
           <Card className="max-w-md">
             {
-                (secretKey && secretKey==='sysboss') ?
+                (secretKey && secretKey===SECRET_UPLOAD) ?
                 <div>
                     <input type="file" accept=".m3u"
                             onChange={(e) => {
@@ -88,7 +108,10 @@ export default function UploadFileCompo({setEnableUploadFile, getFiles}){
                     </div> 
                 </div> : <input type='password' onChange={(e)=>setSecretKey(e.target.value)} placeholder="Enter Secret"/>                
             }
-
+            {
+              (activePlaylist && secretKey && secretKey === SECRET_DELETE) &&
+              <Button color='light' onClick={deleteFile} disabled={loading}>Delete {activePlaylist.label}</Button>
+            }
           </Card >
         </>
     )
