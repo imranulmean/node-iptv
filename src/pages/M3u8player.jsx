@@ -11,7 +11,11 @@ function parseM3U(text) {
             const name = lines[i].replace(/#EXTINF:[^,]*,/, '').trim();
             let url = '';
             for (let j = i ; j < lines.length; j++) {
-                if (!lines[j].startsWith('#')) { url = lines[j]; i = j; break; }
+                if (!lines[j].startsWith('#')) { 
+                    url = lines[j]; 
+                    i = j; 
+                    break; 
+                }
             }
             if (url) list.push({ name, url });
         }
@@ -114,7 +118,8 @@ export default function M3UPlayer() {
                 setStatus('live');
             });
             hls.on(Hls.Events.ERROR, (e, d) => {
-                if (d.fatal) setStatus('error');
+                setStatus(d.error.message);
+                // if (d.fatal) setStatus(d.error.message);
             });
             hlsRef.current = hls;
         } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
@@ -196,7 +201,7 @@ export default function M3UPlayer() {
                                     {!loading && filtered.map((ch, i) => (
                                         <div key={i} onClick={() => play(ch)}
                                             className={`px-3 py-2 text-xs cursor-pointer border-b border-gray-100 truncate flex items-center gap-2
-                                                ${active?.url === ch.url
+                                                ${active?.name === ch.name
                                                     ? 'bg-blue-50 text-blue-700 font-medium'
                                                     : 'hover:bg-gray-50 text-gray-700'
                                                 }`}>
@@ -218,16 +223,16 @@ export default function M3UPlayer() {
                         <div className="flex flex-wrap items-center gap-2">
                             <p className="flex flex-wrap text-xs font-medium">
                                 {active ? active.name : 'Select'}
-                            </p>                        
-                            {status === 'live' &&
-                                <span className="text-xs bg-red-50 text-red-600 px-2 py-0.5 rounded-full shrink-0">● live</span>
+                            </p>
+                            {
+                                status && <span className="flex-flex-wrap text-xs bg-red-50 text-red-600 px-2 py-0.5 rounded-full ">● {status}</span>
                             }
-                            {status === 'loading' &&
-                                <span className="text-xs bg-yellow-50 text-yellow-600 px-2 py-0.5 rounded-full shrink-0">loading</span>
-                            }
-                            {status === 'error' &&
-                                <span className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full shrink-0">error</span>
-                            }   
+
+                            {/* <div className="bg-white border border-gray-200 rounded-lg p-3">
+                                {active &&
+                                    <p className="text-xs text-gray-400 mt-1 truncate">{active.url}</p>
+                                }
+                            </div>                           */}
                         </div>
                      
                         <div className="bg-black rounded-lg relative"
@@ -257,12 +262,6 @@ export default function M3UPlayer() {
                                 ›
                             </button>                            
                         </div>
-
-                        {/* <div className="bg-white border border-gray-200 rounded-lg p-3">
-                            {active &&
-                                <p className="text-xs text-gray-400 mt-1 truncate">{active.url}</p>
-                            }
-                        </div> */}
                     </div>
 
                 </div>

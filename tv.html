@@ -44,22 +44,35 @@
     <div class="row g-3" id="mainBody">
 
       <!-- Sidebar -->
-      <div class="col-auto" id="sidebarCol" style="width:220px;">
+      <div class="col-auto" id="sidebarCol" style="width:300px;">
         <div class="d-flex flex-column gap-2">
           <p class="small fw-semibold mb-0" id="sidebarTitle">— (0 ch)</p>
           <input type="text" id="searchInput" oninput="onSearch()"
             placeholder="search..." class="form-control form-control-sm" />
-          <p class="small fw-semibold mb-0">Select Channels Below</p>
-          <div class="border rounded" style="height:500px; overflow-y:scroll;" id="channelList">
-            <p class="text-muted text-center small p-3">No channels loaded</p>
+          <div style="display:flex; flex-wrap: flex; gap: 2px;">
+            <p class="small fw-semibold mb-0">Select Channels Below</p>
+            <!-- Pagination -->
+            <div class="d-flex align-items-center justify-content-between gap-1">
+              <button onclick="prevPage()" class="btn btn-sm btn-outline-secondary">&#8592;</button>
+              <span class="small text-muted" id="pageInfo">Page 1</span>
+              <button onclick="nextPage()" class="btn btn-sm btn-outline-secondary">&#8594;</button>
+            </div>              
           </div>
+         
+          <div class="border rounded"  id="channelList">
+            <p class="text-muted text-center small p-3">No channels loaded</p>
+          </div>         
         </div>
       </div>
 
       <!-- Player -->
       <div class="col">
         <div class="d-flex flex-column gap-2">
-          <span id="statusBadge" class="badge d-none"></span>
+          <div style="display: flex; flex-wrap: wrap; gap: 2px;">
+            <p class="small fw-semibold mb-1" id="nowName">Select a channel</p> 
+            <span id="statusBadge" class="badge d-none"></span>
+          </div>
+
           <!-- Video box -->
           <div class="bg-black rounded position-relative" id="videoBox">
             <video id="video" controls class="w-100 rounded" style="height:70vh;"></video>
@@ -74,12 +87,6 @@
               ›
             </button>
           </div>
-
-          <!-- Now playing -->
-          <div class="bg-white border rounded p-3">
-            <p class="small fw-semibold mb-1" id="nowName">Select a channel</p>          
-          </div>
-
         </div>
       </div>
 
@@ -96,6 +103,8 @@
   var activePlaylist = null;
   var sidebarVisible = true;
   var touchStartX = null;
+  var currentPage = 0;
+  var PAGE_SIZE = 10;
 
   document.getElementById('videoBox').addEventListener('touchstart', function(e) {
     touchStartX = e.touches[0].clientX;
@@ -138,12 +147,12 @@
 
   function loadPlaylist(playlist) {
     activePlaylist = playlist;
-    allChannels = []; filtered = []; activeChannel = null;
+    allChannels = []; filtered = []; activeChannel = null; currentPage = 0;
     document.getElementById('searchInput').value = '';
     document.getElementById('sidebarTitle').textContent = 'loading...';
     document.getElementById('channelList').innerHTML = '<p class="text-muted text-center small p-3">loading...</p>';
 
-    fetch(BASE + '/get_playlist.php?file=' + playlist.file)
+    fetch(BASE + '/get_playlist.php?file=' + encodeURIComponent(playlist.file))
       .then(function(r) { return r.text(); })
       .then(function(text) {
         allChannels = parseM3U(text);
@@ -162,7 +171,7 @@
       if (lines[i].indexOf('#EXTINF') === 0) {
         var name = lines[i].replace(/#EXTINF:[^,]*,/, '').trim();
         var url = '';
-        for (var j = i ; j < lines.length; j++) {
+        for (var j = i + 1; j < lines.length; j++) {
           if (lines[j].charAt(0) !== '#') { url = lines[j]; i = j; break; }
         }
         if (url) list.push({ name: name, url: url });
@@ -175,18 +184,41 @@
     var list = document.getElementById('channelList');
     if (filtered.length === 0) {
       list.innerHTML = '<p class="text-muted text-center small p-3">no channels found</p>';
+      document.getElementById('pageInfo').textContent = 'Page 0 / 0';
       return;
     }
+
+    var totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+    if (currentPage >= totalPages) currentPage = totalPages - 1;
+
+    var start = currentPage * PAGE_SIZE;
+    var end = Math.min(start + PAGE_SIZE, filtered.length);
+    var pageItems = filtered.slice(start, end);
+
     var html = '';
-    filtered.forEach(function(ch, i) {
-      var isActive = activeChannel && ch.url === activeChannel.url;
-      html += '<div onclick="playIdx(' + i + ')" class="d-flex align-items-center gap-2 px-3 py-2 border-bottom small cursor-pointer '
-        + (isActive ? 'bg-primary-subtle text-primary fw-semibold' : 'text-secondary') + '" role="button">'
-        + '<span class="text-muted" style="min-width:20px;">' + (i + 1) + '</span>'
+    pageItems.forEach(function(ch, i) {
+      var globalIdx = start + i;
+      var isActive = activeChannel && ch.name === activeChannel.name;
+      html += '<div onclick="playIdx(' + globalIdx + ')" role="button"'
+        + ' class="d-flex align-items-center gap-2 px-3 py-2 border-bottom small '
+        + (isActive ? 'bg-primary text-white fw-semibold' : 'text-secondary') + '">'
+        + '<span style="min-width:24px;">' + (globalIdx + 1) + '</span>'
         + '<span class="text-truncate">' + escHtml(ch.name) + '</span>'
         + '</div>';
     });
     list.innerHTML = html;
+
+    document.getElementById('pageInfo').textContent =
+      'Page ' + (currentPage + 1) + ' / ' + totalPages;
+  }
+
+  function prevPage() {
+    if (currentPage > 0) { currentPage--; renderChannels(); }
+  }
+
+  function nextPage() {
+    var totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+    if (currentPage < totalPages - 1) { currentPage++; renderChannels(); }
   }
 
   function escHtml(s) {
@@ -196,6 +228,7 @@
   function onSearch() {
     var q = document.getElementById('searchInput').value.toLowerCase();
     filtered = allChannels.filter(function(c) { return c.name.toLowerCase().indexOf(q) !== -1; });
+    currentPage = 0;
     renderChannels();
     document.getElementById('sidebarTitle').textContent =
       (activePlaylist ? activePlaylist.label : '') + ' (' + filtered.length + ' ch)';
@@ -215,7 +248,10 @@
       hls.loadSource(ch.url);
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function() { video.play().catch(function(){}); setStatus('live'); });
-      hls.on(Hls.Events.ERROR, function(e, d) { if (d.fatal) setStatus('error'); });
+      hls.on(Hls.Events.ERROR, function(e, d) { 
+        if (d.fatal) setStatus(d.error.message); 
+        // if (d.fatal) setStatus('error'); 
+      });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
       video.src = ch.url; video.play().catch(function(){}); setStatus('live');
     } else {
@@ -233,9 +269,14 @@
   function setStatus(s) {
     var badge = document.getElementById('statusBadge');
     badge.className = 'badge';
-    if (s === 'live') { badge.className += ' text-bg-danger'; badge.textContent = '● live'; badge.classList.remove('d-none'); }
-    else if (s === 'loading') { badge.className += ' text-bg-warning'; badge.textContent = 'loading'; badge.classList.remove('d-none'); }
-    else if (s === 'error') { badge.className += ' text-bg-secondary'; badge.textContent = 'error'; badge.classList.remove('d-none'); }
+    // if (s === 'live') { badge.className += ' text-bg-danger'; badge.textContent = '● live'; badge.classList.remove('d-none'); }
+    // else if (s === 'loading') { badge.className += ' text-bg-warning'; badge.textContent = 'loading'; badge.classList.remove('d-none'); }
+    // else if (s === 'error') { badge.className += ' text-bg-secondary'; badge.textContent = 'error'; badge.classList.remove('d-none'); }
+    if(s && s!==''){
+      badge.className += ' text-bg-danger'; 
+      badge.textContent = `● ${s}`; 
+      badge.classList.remove('d-none');
+    }
     else { badge.classList.add('d-none'); }
   }
 
